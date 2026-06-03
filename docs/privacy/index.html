@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Valkyrie No Jutsu</title>
+  <meta name="description" content="Privacy policy for Valkyrie No Jutsu astrology readings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --void:#05030f; --pink:#f25fd0; --purple:#7b3ff2; --text:#e9e4ff; --muted:#b3a9d9;
+      --display:"Cinzel",serif; --serif:"Cormorant Garamond",serif; --sans:"Outfit",system-ui,sans-serif; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--void); color:var(--text); font-family:var(--sans); font-weight:300; line-height:1.8;
+      background-image: radial-gradient(60vw 60vw at 80% -10%, rgba(123,63,242,0.25), transparent 70%),
+        radial-gradient(50vw 50vw at -10% 110%, rgba(242,95,208,0.18), transparent 70%);
+      background-attachment: fixed; }
+    .wrap { width:min(740px,90vw); margin:0 auto; padding:6rem 0 4rem; }
+    a.back { color:var(--pink); text-decoration:none; font-size:0.9rem; letter-spacing:0.05em; }
+    a.back:hover { text-decoration:underline; }
+    h1 { font-family:var(--display); font-size:clamp(2rem,5vw,3rem); margin:1rem 0 0.5rem;
+      background:linear-gradient(120deg,#f7f3ff,var(--pink),#4f8cff); -webkit-background-clip:text;
+      background-clip:text; color:transparent; }
+    h2 { font-family:var(--display); font-size:1.3rem; margin:2.2rem 0 0.6rem; color:#f7f3ff; }
+    p, li { color:var(--muted); margin-bottom:0.8rem; }
+    ul { padding-left:1.4rem; }
+    a { color:var(--pink); }
+    .meta { font-family:var(--serif); font-style:italic; color:var(--muted); }
+    footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid rgba(186,160,255,0.18);
+      font-size:0.85rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../">← Back to Valkyrie No Jutsu</a>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: <span id="d"></span></p>
+
+    <p>Your privacy matters. This policy explains what information Valkyrie No Jutsu
+      ("we", "I") collects and how it is used.</p>
+
+    <h2>Information collected</h2>
+    <ul>
+      <li><strong>Booking details:</strong> When you book a reading, scheduling and
+        contact information (name, email, birth details you choose to share) are
+        collected through Calendly.</li>
+      <li><strong>Payment:</strong> Payments are processed by third-party providers
+        (Calendly, PayPal). We never see or store your full payment card details.</li>
+      <li><strong>Email:</strong> If you email us, we receive the contents of your message.</li>
+    </ul>
+
+    <h2>How it is used</h2>
+    <p>Information is used solely to schedule and deliver your reading, respond to
+      your inquiries, and process payment. We do not sell your information.</p>
+
+    <h2>Third-party services</h2>
+    <p>This site uses Calendly (scheduling/payment), PayPal (payment), and Linktree
+      (link hub). Each has its own privacy policy governing data they collect.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Email <a href="mailto:vlee13@gmail.com">vlee13@gmail.com</a>.</p>
+
+    <footer>© <span id="y"></span> Valkyrie No Jutsu</footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("d").textContent = new Date().toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"});
+  </script>
+</body>
+</html>

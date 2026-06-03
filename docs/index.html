@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valkyrie No Jutsu · Astrology Readings</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Valkyrie No Jutsu: intuitive astrology readings bridging the cosmos and the soul. Book a reading and discover what the stars hold for you." />
+  <link rel="canonical" href="https://valkyrienojutsu.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Valkyrie No Jutsu · Astrology Readings" />
+  <meta property="og:description" content="Intuitive astrology readings bridging the cosmos and the soul." />
+  <meta property="og:image" content="https://valkyrienojutsu.com/og-image.png" />
+  <meta property="og:url" content="https://valkyrienojutsu.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Valkyrie No Jutsu · Astrology Readings" />
+  <meta name="twitter:description" content="Intuitive astrology readings bridging the cosmos and the soul." />
+  <meta name="twitter:image" content="https://valkyrienojutsu.com/og-image.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@200;300;400;500;600;700&family=IM+Fell+English+SC&display=swap" rel="stylesheet" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Person", "LocalBusiness"],
+    "name": "Valkyrie No Jutsu",
+    "description": "Intuitive astrology readings bridging the cosmos and the soul.",
+    "url": "https://valkyrienojutsu.com",
+    "image": "https://valkyrienojutsu.com/og-image.png",
+    "email": "vlee13@gmail.com",
+    "priceRange": "$$",
+    "knowsAbout": ["Astrology", "Natal Charts", "Tarot", "Spiritual Guidance"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --void: #05030f;
+      --void-2: #0b0820;
+      --indigo: #1a1040;
+      --purple: #7b3ff2;
+      --pink: #f25fd0;
+      --blue: #4f8cff;
+      --star: #f7f3ff;
+      --text: #e9e4ff;
+      --muted: #b3a9d9;
+      --glass: rgba(123, 63, 242, 0.08);
+      --glass-border: rgba(186, 160, 255, 0.18);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --display: "Cinzel", serif;
+      --sans: "Outfit", system-ui, sans-serif;
+    }
+
+    /* ===== LIGHT MODE OVERRIDES ===== */
+    [data-theme="light"] {
+      --void:         #ffffff;
+      --void-2:       #f8f5ff;
+      --indigo:       #ede8ff;
+      --purple:       #7b3ff2;
+      --pink:         #c2007e;
+      --blue:         #1a5fd4;
+      --star:         #18063a;
+      --text:         #200a4a;
+      --muted:        #5c3d8a;
+      --glass:        rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(140, 100, 220, 0.2);
+    }
+    [data-theme="light"] body { background: #ffffff; }
+    [data-theme="light"] header.nav { background: rgba(255,255,255,0.75); border-bottom-color: rgba(140,100,220,0.15); }
+    [data-theme="light"] .nebula { display: none; }
+    [data-theme="light"] .vignette { display: none; }
+    [data-theme="light"] .cosmic-photo {
+      display: block;
+      background: url('assets/Gemini_Generated_Image_wjzmt0wjzmt0wjzm.png') center 30% / cover no-repeat;
+      mix-blend-mode: multiply;
+      opacity: 0.55;
+      filter: hue-rotate(-15deg) saturate(1.8) brightness(1.25);
+      -webkit-mask-image:
+        radial-gradient(ellipse 52% 70% at 50% 42%, black 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.28) 42%, rgba(0,0,0,0.7) 62%, black 78%, transparent 96%),
+        linear-gradient(to bottom, transparent 0%, black 8%, black 82%, transparent 96%);
+      -webkit-mask-composite: source-in;
+      mask-image:
+        radial-gradient(ellipse 52% 70% at 50% 42%, black 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.28) 42%, rgba(0,0,0,0.7) 62%, black 78%, transparent 96%),
+        linear-gradient(to bottom, transparent 0%, black 8%, black 82%, transparent 96%);
+      mask-composite: intersect;
+    }
+    [data-theme="light"] .constellation { opacity: 1; }
+    [data-theme="light"] .constellation line { stroke: rgba(100,55,200,0.45); stroke-width: 1.2; }
+    [data-theme="light"] .constellation circle { fill: rgba(123,63,242,0.8); }
+    [data-theme="light"] .about-banner { -webkit-mask-image: radial-gradient(ellipse 80% 75% at 50% 50%, black 30%, transparent 68%); mask-image: radial-gradient(ellipse 80% 75% at 50% 50%, black 30%, transparent 68%); }
+    [data-theme="light"] .section-title { background: linear-gradient(120deg, #3a0878, #a030c8 45%, #c8208a); -webkit-background-clip: text; background-clip: text; }
+    [data-theme="light"] .hero h1 { background: linear-gradient(120deg, #3a0878, #b040d8 45%, #d4308c); -webkit-background-clip: text; background-clip: text; filter: none; }
+    [data-theme="light"] .card { background: rgba(252,238,255,0.7); border-color: rgba(200,160,240,0.25); box-shadow: 0 4px 24px rgba(180,100,220,0.07); }
+    [data-theme="light"] .card:hover { border-color: rgba(194,0,126,0.4); }
+    [data-theme="light"] .valkyrie-frame {
+      filter: drop-shadow(4px 14px 18px rgba(70, 10, 130, 0.22))
+              drop-shadow(-4px 14px 18px rgba(70, 10, 130, 0.16));
+    }
+    [data-theme="light"] .valkyrie-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0.7) 8%, transparent 20%),
+        linear-gradient(to top,    #fff 0%, rgba(255,255,255,0.7) 8%, transparent 20%),
+        linear-gradient(to right,  #fff 0%, rgba(255,255,255,0.7) 8%, transparent 20%),
+        linear-gradient(to left,   #fff 0%, rgba(255,255,255,0.7) 8%, transparent 20%);
+    }
+    [data-theme="dark"]  .valkyrie-frame img { filter: brightness(1.1) saturate(1.5) contrast(1.15); }
+    [data-theme="dark"]  .valkyrie-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 72% 68% at 50% 46%,
+          transparent 50%, rgba(5,3,15,0.4) 64%, rgba(5,3,15,0.85) 76%, #05030f 86%),
+        linear-gradient(to bottom, #05030f 0%, transparent 8%, transparent 92%, #05030f 100%),
+        linear-gradient(to right,  #05030f 0%, transparent 8%, transparent 92%, #05030f 100%);
+    }
+    [data-theme="light"] .valkyrie-frame img { mix-blend-mode: multiply; transform: none; filter: none; }
+    [data-theme="light"] .about-banner img { mix-blend-mode: multiply; transform: scale(1.15); }
+    [data-theme="light"] .ss-sun {
+      background: radial-gradient(circle at 38% 38%, #fff0fa, #f0a8d8 50%, #c878c0);
+      box-shadow: 0 0 18px rgba(194,0,126,0.35), 0 0 45px rgba(194,0,126,0.15);
+    }
+    [data-theme="light"] .ss-planet-moon {
+      background: radial-gradient(circle at 32% 28%, #f4f0ff, #c8c0e8 45%, #9888c8 75%, #7060a8);
+      box-shadow: inset -4px -4px 8px rgba(0,0,0,0.15), 0 0 10px rgba(180,160,220,0.35);
+    }
+    [data-theme="light"] .ss-planet-email {
+      background: radial-gradient(circle at 33% 28%, #e8f0ff, #a0b8f0 44%, #6080d0 75%, #3050a8);
+      box-shadow: inset -5px -5px 10px rgba(0,0,0,0.12), 0 0 18px rgba(100,140,220,0.35);
+    }
+    [data-theme="light"] .ss-planet-email:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.15), 0 0 26px rgba(100,140,220,0.55); }
+    [data-theme="light"] .ss-planet-ig {
+      background: radial-gradient(circle at 33% 28%, #ffe8f8, #f0b0d8 44%, #d078b0 75%, #a85090);
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.12), 0 0 18px rgba(210,120,180,0.35);
+    }
+    [data-theme="light"] .ss-planet-ig:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.15), 0 0 26px rgba(210,120,180,0.55); }
+    [data-theme="light"] .ss-planet-tiktok {
+      background: radial-gradient(circle at 33% 28%, #e0fff8, #88d8cc 44%, #40a898 75%, #208878);
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.12), 0 0 18px rgba(80,168,152,0.35);
+    }
+    [data-theme="light"] .ss-planet-tiktok:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.15), 0 0 26px rgba(80,168,152,0.55); }
+    [data-theme="light"] .agreements-content { background: rgba(255,255,255,0.75); }
+    [data-theme="light"] .agreements-content h4 { color: #c828a8; }
+    [data-theme="light"] .agreements-content .ack { color: #c828a8; }
+    [data-theme="dark"]  .agreements-content .ack { color: var(--pink); opacity: 1; }
+    [data-theme="light"] footer { border-top-color: rgba(140,100,220,0.15); }
+    [data-theme="light"] .card-btn { color: var(--text); border-color: rgba(194,0,126,0.4); background: rgba(255,255,255,0.85); }
+    [data-theme="light"] .agreements-block summary { color: #c828a8; }
+    [data-theme="light"] .btn { background: linear-gradient(120deg, #b490f5, #e878c0); box-shadow: 0 0 20px rgba(180,144,245,0.35); }
+    [data-theme="light"] .moon-popup { background: rgba(255,255,255,0.95); border-color: rgba(123,63,242,0.25); }
+    [data-theme="light"] .moon-popup-name { color: var(--star); }
+    [data-theme="light"] .pay-btn { background: rgba(123,63,242,0.06); border-color: rgba(140,100,220,0.2); }
+    [data-theme="light"] .card-scroll-body::-webkit-scrollbar-thumb { background: rgba(194,0,126,0.3); }
+    [data-theme="light"] .about-left-panel::before { border-color: rgba(194,0,126,0.4); }
+    [data-theme="light"] .about-left-panel::after  { border-color: rgba(123,63,242,0.4); }
+    /* Orbital rings — more visible in light mode */
+    [data-theme="light"] .ss-rings ellipse:nth-child(1) { stroke: rgba(90,40,180,0.55);  stroke-width: 0.7; }
+    [data-theme="light"] .ss-rings ellipse:nth-child(2) { stroke: rgba(20,70,210,0.6);   stroke-width: 0.7; }
+    [data-theme="light"] .ss-rings ellipse:nth-child(3) { stroke: rgba(170,0,110,0.55);  stroke-width: 0.7; }
+    [data-theme="light"] .ss-rings ellipse:nth-child(4) { stroke: rgba(0,140,130,0.5);   stroke-width: 0.7; }
+
+    /* Theme toggle buttons */
+    .theme-toggle { display: flex; gap: 0.6rem; justify-content: center; margin-top: 1.2rem; }
+    .theme-btn {
+      padding: 0.55rem 1.6rem; border-radius: 999px; cursor: pointer;
+      font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0.1em;
+      border: 1px solid rgba(186,160,255,0.35); background: rgba(255,255,255,0.06);
+      color: var(--muted); transition: all 0.25s;
+    }
+    .theme-btn:hover {
+      border-color: rgba(242,95,208,0.6); color: var(--star);
+      box-shadow: 0 0 16px rgba(242,95,208,0.25);
+    }
+    .theme-btn.active {
+      background: rgba(242,95,208,0.12); border-color: rgba(242,95,208,0.7);
+      color: var(--star);
+      box-shadow: 0 0 20px rgba(242,95,208,0.35), 0 0 40px rgba(242,95,208,0.15);
+    }
+    [data-theme="light"] .theme-btn { border-color: rgba(120,80,200,0.3); color: var(--muted); background: rgba(123,63,242,0.05); }
+    [data-theme="light"] .theme-btn:hover { border-color: rgba(194,0,126,0.5); color: var(--text); box-shadow: 0 0 16px rgba(194,0,126,0.2); }
+    [data-theme="light"] .theme-btn.active { background: rgba(194,0,126,0.1); border-color: rgba(194,0,126,0.65); color: var(--text); box-shadow: 0 0 20px rgba(194,0,126,0.3), 0 0 40px rgba(194,0,126,0.12); }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--void);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    /* ---------- Cosmic background layers ---------- */
+    /* Starfield canvas sits behind everything */
+    #starfield {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      display: block;
+    }
+
+    /* Nebula-planet photo blended into the deep background */
+    .cosmic-photo {
+      position: fixed; inset: 0; z-index: -4;
+      background: url('assets/Gemini_Generated_Image_n4ukl5n4ukl5n4uk.png') center 30% / cover no-repeat;
+      opacity: 0.9;
+      mix-blend-mode: screen;
+      -webkit-mask-image: linear-gradient(to bottom, black 0%, black 25%, rgba(0,0,0,0.6) 55%, transparent 75%);
+      mask-image: linear-gradient(to bottom, black 0%, black 25%, rgba(0,0,0,0.6) 55%, transparent 75%);
+    }
+    .cosmic-photo::after {
+      content: ""; position: absolute; inset: 0;
+      background: transparent;
+    }
+
+    /* Swirly watercolor nebula blobs */
+    .nebula {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .nebula span {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      mix-blend-mode: screen;
+      animation: drift 26s ease-in-out infinite alternate;
+    }
+    .nebula .b1 { width: 55vw; height: 55vw; top: -10vh; left: -10vw;
+      background: radial-gradient(circle at 30% 30%, var(--purple), transparent 70%); }
+    .nebula .b2 { width: 50vw; height: 50vw; top: 20vh; right: -15vw;
+      background: radial-gradient(circle at 60% 40%, var(--pink), transparent 70%);
+      animation-delay: -6s; }
+    .nebula .b3 { width: 60vw; height: 60vw; bottom: -20vh; left: 20vw;
+      background: radial-gradient(circle at 50% 50%, var(--blue), transparent 70%);
+      animation-delay: -12s; }
+    .nebula .b4 { width: 38vw; height: 38vw; top: 55vh; left: -8vw;
+      background: radial-gradient(circle at 50% 50%, var(--indigo), transparent 70%);
+      animation-delay: -18s; }
+
+    @keyframes drift {
+      0%   { transform: translate(0, 0) scale(1); }
+      50%  { transform: translate(4vw, -3vh) scale(1.12); }
+      100% { transform: translate(-3vw, 4vh) scale(0.95); }
+    }
+
+    /* Subtle vignette so text stays legible */
+    .vignette {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(ellipse at 50% 0%, transparent 40%, rgba(5,3,15,0.55) 100%);
+    }
+
+    /* Faint constellation line-art overlay */
+    .constellation {
+      position: fixed; pointer-events: none; z-index: -1; opacity: 0.4;
+    }
+    .constellation.c1 { top: 12%; right: 6%; width: 240px; }
+    .constellation.c2 { bottom: 14%; left: 4%; width: 200px; }
+    .constellation line { stroke: rgba(186,160,255,0.5); stroke-width: 1; }
+    .constellation circle { fill: var(--star); }
+    @media (max-width: 700px) { .constellation { display: none; } }
+    [data-theme="light"] .constellation { opacity: 0.7; }
+
+    /* ---------- Layout ---------- */
+    .wrap { width: min(1100px, 90vw); margin: 0 auto; }
+    section { padding: 7rem 0; position: relative; }
+
+    h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: 0.04em; line-height: 1.2; }
+
+    .eyebrow {
+      font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--pink); margin-bottom: 1rem;
+    }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1.5rem;
+      background: linear-gradient(120deg, var(--star), var(--pink), var(--blue));
+      -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { font-family: var(--serif); font-size: 1.3rem; color: var(--muted); max-width: 60ch; }
+    /* Bio section — all text cursive/italic for cohesion */
+    .about-bio .lead { font-style: italic; }
+
+    /* ---------- Nav ---------- */
+    header.nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem clamp(1rem, 4vw, 4rem);
+      backdrop-filter: blur(10px);
+      background: rgba(5, 3, 15, 0.35);
+      border-bottom: 1px solid var(--glass-border);
+      transition: background 0.3s;
+    }
+    .brand { font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--star); text-decoration: none; }
+    .brand span { color: var(--pink); }
+    nav.links { display: flex; gap: clamp(1rem, 2vw, 1.8rem); align-items: center; flex-wrap: nowrap; }
+    nav.links a { color: var(--muted); text-decoration: none; font-size: 0.9rem;
+      letter-spacing: 0.08em; transition: color 0.2s; white-space: nowrap; }
+    nav.links a:hover { color: var(--star); }
+    .nav-toggle { display: none; background: none; border: 0; color: var(--star);
+      font-size: 1.5rem; cursor: pointer; }
+    @media (max-width: 760px) {
+      nav.links { position: fixed; inset: 0 0 0 auto; width: min(70vw, 280px);
+        flex-direction: column; gap: 1.5rem; padding: 5rem 2rem;
+        background: rgba(11, 8, 32, 0.96); backdrop-filter: blur(14px);
+        transform: translateX(100%); transition: transform 0.3s;
+        border-left: 1px solid var(--glass-border); }
+      nav.links.open { transform: translateX(0); }
+      .nav-toggle { display: block; z-index: 60; }
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-block; font-family: var(--sans); font-weight: 500;
+      letter-spacing: 0.05em; text-decoration: none; cursor: pointer;
+      padding: 0.9rem 2.2rem; border-radius: 999px; border: 0;
+      color: #fff; font-size: 0.95rem;
+      background: linear-gradient(120deg, var(--purple), var(--pink));
+      box-shadow: 0 0 24px rgba(242, 95, 208, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(242, 95, 208, 0.6); }
+    .btn.ghost { background: transparent; border: 1px solid var(--glass-border);
+      box-shadow: none; color: var(--text); }
+    .btn.ghost:hover { border-color: var(--pink); box-shadow: 0 0 20px rgba(242,95,208,0.25); }
+
+    /* ---------- Hero ---------- */
+    .hero { min-height: 100vh; display: grid; place-items: center; text-align: center;
+      padding-top: 6rem; }
+    .hero-inner { display: grid; gap: 1.6rem; justify-items: center; }
+    .valkyrie-frame {
+      width: clamp(280px, 80vw, 520px);
+      aspect-ratio: 3 / 4;
+      border-radius: 0;
+      display: grid; place-items: center; position: relative; overflow: hidden;
+      background: transparent;
+      border: none;
+      /* Purple-pink glow to match her dark cosmic energy */
+      filter: drop-shadow(0 0 50px rgba(180, 100, 255, 0.4))
+              drop-shadow(0 0 100px rgba(242, 95, 208, 0.2))
+              drop-shadow(6px 18px 22px rgba(30, 0, 70, 0.85))
+              drop-shadow(-6px 18px 22px rgba(30, 0, 70, 0.65));
+      /* Mask: solid center fading to transparent at all edges.
+         Bottom-left fades harder to kill the logo. */
+      -webkit-mask-image: radial-gradient(ellipse 72% 76% at 50% 46%,
+        black 30%, rgba(0,0,0,0.92) 48%, rgba(0,0,0,0.4) 66%, transparent 82%);
+      mask-image: radial-gradient(ellipse 72% 76% at 50% 46%,
+        black 30%, rgba(0,0,0,0.92) 48%, rgba(0,0,0,0.4) 66%, transparent 82%);
+      animation: floaty 7s ease-in-out infinite alternate;
+    }
+    .valkyrie-frame img { position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 18%; display: block; z-index: 1;
+      mix-blend-mode: screen;
+      filter: brightness(1.5) saturate(1.4) contrast(1.1);
+      /* Fade all edges + bottom-right corner where the star watermark is */
+      -webkit-mask-image: radial-gradient(ellipse 78% 82% at 50% 44%,
+        black 38%, rgba(0,0,0,0.85) 56%, rgba(0,0,0,0.25) 74%, transparent 88%);
+      mask-image: radial-gradient(ellipse 78% 82% at 50% 44%,
+        black 38%, rgba(0,0,0,0.85) 56%, rgba(0,0,0,0.25) 74%, transparent 88%); }
+    .valkyrie-frame .placeholder { padding: 2rem; color: var(--muted); font-family: var(--serif);
+      font-size: 1rem; }
+    .valkyrie-frame .placeholder .glyph { font-size: 3rem; display: block; margin-bottom: 0.5rem; }
+    @keyframes floaty { from { transform: translateY(0); } to { transform: translateY(-14px); } }
+
+    /* Hero title — IM Fell English SC: antique mystical spellbook feel */
+    .hero h1 {
+      font-family: "IM Fell English SC", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 7vw, 5.5rem);
+      font-style: italic;
+      letter-spacing: 0.06em;
+      line-height: 1.15;
+      background: linear-gradient(120deg, var(--star), var(--pink) 50%, var(--blue));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 0 30px rgba(242, 95, 208, 0.4))
+              drop-shadow(0 0 60px rgba(180, 130, 255, 0.2));
+    }
+    .hero .tagline { font-family: var(--serif); font-style: italic;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem); color: var(--muted); max-width: 32ch; }
+    .hero .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+
+    /* ---------- Glass cards ---------- */
+    .card {
+      background: var(--glass); border: 1px solid var(--glass-border);
+      border-radius: 16px; padding: 2rem; backdrop-filter: blur(6px);
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(242,95,208,0.4);
+      box-shadow: 0 0 30px rgba(123,63,242,0.25); }
+
+    /* ---------- About ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    .about-bio { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; position: relative; }
+    .about-bio-divider { width: 1px; background: linear-gradient(to bottom, transparent, var(--glass-border), transparent); align-self: stretch; }
+    @media (max-width: 760px) { .about-bio { grid-template-columns: 1fr; } .about-bio-divider { display: none; } }
+    .about-left-panel { position: relative; padding: 0 1.5rem 0 0; }
+    .about-left-panel::before {
+      content: ''; position: absolute; border-radius: 50%; pointer-events: none;
+      width: 90%; aspect-ratio: 1;
+      top: -8%; left: -4%;
+      border: 1px solid rgba(242,95,208,0.5);
+      /* top-left arc only */
+      -webkit-mask-image: conic-gradient(from 200deg, black 0deg, black 130deg, transparent 130deg);
+      mask-image: conic-gradient(from 200deg, black 0deg, black 130deg, transparent 130deg);
+    }
+    /* Full-bio framing arc at the bottom */
+    .about-bio::after {
+      content: ''; position: absolute; border-radius: 50%; pointer-events: none;
+      width: 42%; aspect-ratio: 1;
+      bottom: -18%; right: -2%;
+      border: 1px solid rgba(123,63,242,0.45);
+      -webkit-mask-image: conic-gradient(from 15deg, black 0deg, black 145deg, transparent 145deg);
+      mask-image: conic-gradient(from 15deg, black 0deg, black 145deg, transparent 145deg);
+    }
+    .about-banner { width: 100%; overflow: hidden; margin-top: 5rem;
+      -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, black 14%, rgba(0,0,0,0.88) 27%, rgba(0,0,0,0.58) 44%, rgba(0,0,0,0.22) 60%, rgba(0,0,0,0.04) 72%, transparent 82%);
+      mask-image: radial-gradient(ellipse 70% 65% at 50% 50%, black 14%, rgba(0,0,0,0.88) 27%, rgba(0,0,0,0.58) 44%, rgba(0,0,0,0.22) 60%, rgba(0,0,0,0.04) 72%, transparent 82%); }
+    .about-banner img { width: 100%; max-height: 600px;
+      object-fit: cover; object-position: center 40%; display: block;
+      mix-blend-mode: screen; transform: scale(1.15); }
+
+    /* ---------- Services ---------- */
+    .service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem; margin-bottom: 3rem; align-items: stretch; }
+    .service-cards h3 { font-size: 1.25rem; color: var(--star); margin-bottom: 0.5rem; }
+    .service-cards .price { color: var(--pink); font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.7rem; }
+    .service-cards .price span { font-size: 0.95rem; color: var(--muted); }
+    .service-cards p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
+    .card-scroll-body { max-height: 280px; overflow-y: auto; padding-right: 0.4rem; scrollbar-width: thin;
+      scrollbar-color: rgba(242,95,208,0.3) transparent; }
+    .card-scroll-body::-webkit-scrollbar { width: 4px; }
+    .card-scroll-body::-webkit-scrollbar-thumb { background: rgba(242,95,208,0.3); border-radius: 4px; }
+    .service-tag { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--pink); margin-bottom: 0.6rem; font-family: var(--sans); }
+    .free-price { color: var(--pink) !important; }
+    .service-details { list-style: none; padding: 0; margin-top: 0.9rem; display: grid; gap: 0.3rem; }
+    .service-details li { font-size: 0.85rem; color: var(--muted); padding-left: 1.1rem; position: relative; }
+    .service-details li::before { content: "✦"; position: absolute; left: 0;
+      font-size: 0.6rem; top: 0.2rem; color: var(--pink); }
+    .card-section-label { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--pink); font-family: var(--sans); margin: 1.2rem 0 0.4rem; opacity: 0.7; }
+    .card-note { font-size: 0.8rem; color: var(--blue); font-style: italic;
+      margin-top: 0.8rem; padding: 0.5rem 0.7rem;
+      border-left: 2px solid rgba(79,140,255,0.4); }
+    .agreements-block { margin-top: 3rem; }
+    .agreements-block summary { cursor: pointer; list-style: none; display: flex;
+      align-items: center; justify-content: center; gap: 0.7rem;
+      color: var(--pink); font-size: 1rem; font-family: var(--sans); letter-spacing: 0.06em;
+      letter-spacing: 0.04em; padding: 1rem 1.4rem;
+      border: 1px solid var(--glass-border); border-radius: 12px;
+      background: var(--glass); backdrop-filter: blur(6px);
+      transition: border-color 0.2s; text-align: center; }
+    .agreements-block summary:hover { border-color: rgba(242,95,208,0.35); }
+    .agreements-block[open] summary { border-radius: 12px 12px 0 0; border-bottom-color: transparent; }
+    .agreements-content { border: 1px solid var(--glass-border); border-top: none;
+      border-radius: 0 0 12px 12px; padding: 1.4rem 1.6rem;
+      background: var(--glass); backdrop-filter: blur(6px); }
+    .agreements-content h4 { color: var(--pink); font-size: 0.9rem; margin: 1rem 0 0.3rem; }
+    .agreements-content h4:first-child { margin-top: 0; }
+    .agreements-content p { color: var(--muted); font-size: 0.85rem; line-height: 1.65; }
+    .agreements-content .ack { margin-top: 1.2rem; font-style: italic;
+      color: var(--muted); font-size: 0.82rem; opacity: 0.75; }
+
+    /* ---------- Testimonials ---------- */
+    .testi-carousel { position: relative; width: 100%; max-width: 680px; margin: 0 auto; clip-path: inset(-12px 0 -40px 0); }
+    .testi-track { display: flex; width: 100%; transition: transform 0.45s cubic-bezier(0.4,0,0.2,1); will-change: transform; }
+    .testi-slide { min-width: 100%; width: 100%; flex-shrink: 0; box-sizing: border-box; }
+    .testi-slide blockquote { font-family: var(--serif); font-size: 1.2rem; font-style: italic;
+      color: var(--text); margin-bottom: 1rem; line-height: 1.8; }
+    .testi-slide .who { color: var(--pink); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .testi-nav { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1.4rem; }
+    .testi-btn {
+      background: none; border: 1px solid var(--glass-border); color: var(--muted);
+      width: 38px; height: 38px; border-radius: 50%; cursor: pointer;
+      font-size: 1.5rem; line-height: 1; display: flex; align-items: center; justify-content: center;
+      transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .testi-btn:hover { color: var(--pink); border-color: rgba(242,95,208,0.5); box-shadow: 0 0 12px rgba(242,95,208,0.2); }
+    .testi-dots { display: flex; gap: 0.5rem; align-items: center; }
+    .testi-dot {
+      width: 7px; height: 7px; border-radius: 50%; border: none; cursor: pointer;
+      background: var(--muted); opacity: 0.35; transition: opacity 0.2s, background 0.2s, transform 0.2s;
+    }
+    .testi-dot.active { background: var(--pink); opacity: 1; transform: scale(1.3); }
+    [data-theme="light"] .testi-btn { border-color: rgba(180,140,220,0.3); color: var(--muted); }
+    .stars-row { color: var(--pink); letter-spacing: 0.2em; margin-bottom: 0.8rem; }
+
+    /* ---------- Connect — Planetary System ---------- */
+    .solar-system {
+      position: relative;
+      width: min(700px, 96vw); aspect-ratio: 700/300; height: auto;
+      margin: 3rem auto 5rem; overflow: visible;
+    }
+    .ss-rings { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+    /* Front arc of innermost orbit — sits in front of the sun */
+    .ss-ring-inner-front {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; overflow: visible; z-index: 4;
+      clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    }
+    .ss-ring-inner-front ellipse { fill: none; stroke: rgba(200,200,240,0.22); stroke-width: 1; }
+    [data-theme="light"] .ss-ring-inner-front ellipse { stroke: rgba(90,40,180,0.55); stroke-width: 0.7; }
+
+    .ss-sun {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 66px; height: 66px; border-radius: 50%;
+      background: radial-gradient(circle at 38% 38%, #ffe8f8, var(--pink) 55%, var(--purple));
+      box-shadow: 0 0 22px rgba(242,95,208,0.9), 0 0 55px rgba(242,95,208,0.45), 0 0 100px rgba(123,63,242,0.3);
+      z-index: 3; animation: sun-pulse 3s ease-in-out infinite;
+    }
+    @keyframes sun-pulse {
+      0%,100% { box-shadow: 0 0 22px rgba(242,95,208,0.9), 0 0 55px rgba(242,95,208,0.45); }
+      50%      { box-shadow: 0 0 34px rgba(242,95,208,1),   0 0 80px rgba(242,95,208,0.6), 0 0 130px rgba(123,63,242,0.4); }
+    }
+
+    /* Saturn ring — split back/front, rakish tilt */
+    .ss-sun-ring-back, .ss-sun-ring-front {
+      position: absolute; top: 50%; left: 50%;
+      width: 136px; height: 22px; border-radius: 50%;
+      border: 2px solid rgba(242,95,208,0.72);
+      transform: translate(-50%, -50%) rotate(60deg);
+      box-shadow: 0 0 14px rgba(242,95,208,0.55), 0 0 32px rgba(180,100,255,0.22);
+      pointer-events: none;
+    }
+    .ss-sun-ring-back  { z-index: 2; clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%); }
+    .ss-sun-ring-front { z-index: 4; clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%); }
+
+    /* 3D orb base */
+    .ss-planet {
+      position: absolute; border-radius: 50%; border: none;
+      display: flex; align-items: center; justify-content: center;
+      transform: translate(-50%, -50%);
+      cursor: pointer; pointer-events: all; text-decoration: none;
+      transition: box-shadow 0.3s, filter 0.3s; z-index: 5;
+      width: 50px; height: 50px;
+    }
+    .ss-planet-icon { font-size: 1.25rem; line-height: 1; display: flex; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
+
+    /* Moon — clickable inner orb */
+    .ss-planet-moon {
+      width: 26px; height: 26px; cursor: pointer;
+      background: radial-gradient(circle at 32% 28%, #e8eaf6, #9e9eb8 42%, #3a3a52 80%, #1e1e30);
+      box-shadow: inset -4px -4px 8px rgba(0,0,0,0.6), 0 0 8px rgba(180,180,220,0.3);
+      transition: box-shadow 0.3s;
+    }
+    .ss-planet-moon:hover { box-shadow: inset -4px -4px 8px rgba(0,0,0,0.6), 0 0 18px rgba(200,200,255,0.6); }
+
+    /* Moon popup */
+    .moon-popup {
+      position: fixed; z-index: 1000;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%) scale(0.92);
+      background: rgba(10,6,30,0.92); backdrop-filter: blur(20px);
+      border: 1px solid rgba(186,160,255,0.3); border-radius: 16px;
+      padding: 1.3rem 1.6rem; min-width: 220px;
+      box-shadow: 0 0 40px rgba(123,63,242,0.3);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      text-align: center;
+    }
+    .moon-popup.open { opacity: 1; pointer-events: all; transform: translate(-50%, -50%) scale(1); }
+    .moon-popup-phase { font-size: 2.4rem; line-height: 1; margin-bottom: 0.4rem; }
+    .moon-popup-name  { font-family: var(--serif); font-size: 1.05rem; color: var(--star); margin-bottom: 0.2rem; }
+    .moon-popup-sign  { color: var(--pink); font-size: 0.9rem; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+    .moon-popup-illu  { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.05em; }
+    .moon-popup-close { position: absolute; top: 0.5rem; right: 0.8rem;
+      background: none; border: none; color: var(--muted); cursor: pointer; font-size: 1rem; line-height: 1; }
+    /* Email — blue orb */
+    .ss-planet-email {
+      width: 40px; height: 40px;
+      background: radial-gradient(circle at 33% 28%, #c8dcff, #4f8cff 44%, #1230a0 80%, #08164a);
+      box-shadow: inset -5px -5px 10px rgba(0,0,0,0.45), 0 0 18px rgba(79,140,255,0.4);
+    }
+    .ss-planet-email:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 28px rgba(79,140,255,0.7); filter: brightness(1.15); }
+    /* Instagram — pink/purple orb */
+    .ss-planet-ig {
+      background: radial-gradient(circle at 33% 28%, #ffd6f5, #f25fd0 44%, #7b1fa2 80%, #330040);
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 18px rgba(242,95,208,0.4);
+    }
+    .ss-planet-ig:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 28px rgba(242,95,208,0.7); filter: brightness(1.15); }
+    /* TikTok — teal orb */
+    .ss-planet-tiktok {
+      background: radial-gradient(circle at 33% 28%, #b2fff8, #00d2c8 44%, #006060 80%, #001f1f);
+      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 18px rgba(0,210,200,0.4);
+    }
+    .ss-planet-tiktok:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 28px rgba(0,210,200,0.7); filter: brightness(1.15); }
+
+    .pay-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    .pay-btn {
+      display: flex; align-items: center; justify-content: center;
+      padding: 0.55rem 0.5rem; border-radius: 10px; text-decoration: none;
+      font-size: 0.78rem; font-family: var(--sans); letter-spacing: 0.04em;
+      color: var(--muted); background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(186,160,255,0.12); backdrop-filter: blur(6px);
+      transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .pay-btn:hover { color: #fff; border-color: rgba(242,95,208,0.6);
+      box-shadow: 0 0 14px rgba(242,95,208,0.3); }
+
+    .card-btn {
+      display: block; margin-top: auto; padding-top: 1.4rem; text-align: center;
+      padding: 0.65rem 1.2rem; border-radius: 999px; text-decoration: none;
+      font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.08em;
+      color: #fff; border: 1px solid rgba(242,95,208,0.45);
+      background: rgba(242,95,208,0.08);
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .card-btn:hover { background: rgba(242,95,208,0.18); border-color: rgba(242,95,208,0.8);
+      box-shadow: 0 0 16px rgba(242,95,208,0.3); }
+
+    /* ---------- Footer ---------- */
+    footer { padding: 3rem 0 4rem; border-top: 1px solid var(--glass-border); text-align: center; }
+    footer nav { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    footer a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    footer a:hover { color: var(--star); }
+    footer .copy { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.05em; }
+
+    .center { text-align: center; display: grid; justify-items: center; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s, transform 0.8s; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cosmic background -->
+  <div class="cosmic-photo" aria-hidden="true"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="nebula" aria-hidden="true">
+    <span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span>
+  </div>
+  <div class="vignette" aria-hidden="true"></div>
+  <svg class="constellation c1" viewBox="0 0 200 160" aria-hidden="true">
+    <line x1="20" y1="30" x2="70" y2="60" /><line x1="70" y1="60" x2="120" y2="40" />
+    <line x1="120" y1="40" x2="160" y2="90" /><line x1="70" y1="60" x2="90" y2="120" />
+    <circle cx="20" cy="30" r="2.5" /><circle cx="70" cy="60" r="3" /><circle cx="120" cy="40" r="2.5" />
+    <circle cx="160" cy="90" r="2.5" /><circle cx="90" cy="120" r="2" />
+  </svg>
+  <svg class="constellation c2" viewBox="0 0 200 160" aria-hidden="true">
+    <line x1="30" y1="100" x2="80" y2="70" /><line x1="80" y1="70" x2="130" y2="100" />
+    <line x1="130" y1="100" x2="170" y2="50" /><line x1="80" y1="70" x2="60" y2="20" />
+    <circle cx="30" cy="100" r="2.5" /><circle cx="80" cy="70" r="3" /><circle cx="130" cy="100" r="2.5" />
+    <circle cx="170" cy="50" r="2" /><circle cx="60" cy="20" r="2" />
+  </svg>
+
+  <!-- Nav -->
+  <header class="nav">
+    <a href="#top" class="brand">Valkyrie<span>·</span>No<span>·</span>Jutsu</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#connect">Connect</a>
+      <a href="#services" class="btn" style="padding:0.5rem 1.4rem; white-space:nowrap; flex-shrink:0;">Book a Reading</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero wrap">
+      <div class="hero-inner">
+        <p class="eyebrow">Astrology &amp; Soul Guidance</p>
+        <h1>Valkyrie No Jutsu</h1>
+        <p class="tagline">Your cosmic guide between worlds.</p>
+        <div class="theme-toggle" role="group" aria-label="Choose theme">
+          <button class="theme-btn active" id="btn-dark"  onclick="setTheme('dark')">Dark Mode</button>
+          <button class="theme-btn"        id="btn-light" onclick="setTheme('light')">Light Mode</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="wrap">
+      <div class="about-grid reveal">
+        <div>
+          <p class="eyebrow">About Me</p>
+          <h2 class="section-title">Guided by the cosmos</h2>
+          <div class="about-bio">
+            <!-- Panel 1: Valkyrie blurb -->
+            <div class="about-left-panel">
+              <p class="lead" style="color:var(--pink); margin-bottom:0.3rem;">
+                <em>Valkyrie No Jutsu</em>, <em>"The Art of the Valkyries"</em>
+              </p>
+              <p class="lead">
+                In mythology, Valkyries were divine emissaries, winged guardians who moved freely between the world of the living and the realm beyond. They did not judge; they <em>witnessed</em>. They held the sacred space between worlds with grace, strength, and unwavering clarity, guiding souls along their passage.
+              </p>
+              <p class="lead" style="margin-top:1.2rem;">
+                That is the essence of this work. As your astrologer, I serve as a bridge between who you are and who your soul came here to become, between the life you are living and the cosmic blueprint written in your chart at the moment of your birth. The stars do not dictate your fate. They illuminate your path.
+              </p>
+            </div>
+            <!-- Panel 2: Personal story -->
+            <div>
+              <p class="lead">
+                Astrology found me when religion and conventional paths left my deepest questions unanswered. Despite building a seemingly beautiful life, I felt a quiet, persistent emptiness. My turning point came through 3 major health scares that made me rethink what really matters. Forced back to the basics, my physical healing journey unlocked a deep connection to energy, guiding me eventually to astrology, the ultimate map for my soul.
+              </p>
+              <p class="lead" style="margin-top:1.2rem;">
+                I have navigated significant, life-altering transits: Saturn Return, Sade Sati, and a Pluto-Pluto square. These experiences, along with my deep study, allow me to hold space for your own karmic journey with true compassion.
+              </p>
+              <p class="lead" style="margin-top:1.2rem;">
+                I look forward to working with you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-banner reveal">
+        <img src="assets/Gemini_Generated_Image_su2qdmsu2qdmsu2q.png" alt="Cosmic circuit" />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="wrap">
+      <div class="center reveal" style="margin-bottom:3rem;">
+        <p class="eyebrow">Offerings</p>
+        <h2 class="section-title">Readings &amp; Services</h2>
+        <p class="lead">Choose your reading below and book instantly. Payment is handled securely at checkout.</p>
+      </div>
+
+      <div class="service-cards reveal">
+
+        <!-- Resonance Call -->
+        <div class="card card-free">
+          <h3>Resonance Call</h3>
+          <p class="price free-price">Free <span>/ 10 mins</span></p>
+          <div class="card-scroll-body">
+            <p>Got questions? Ask me anything.<br><br>A zero-pressure space to meet, share your goals, and see if our energies align. While this quick video call isn't a personalized chart reading, I am completely open to any general questions you have about astrology or how we can work together. Let's ensure we are the perfect match before taking the next step!</p>
+          </div>
+          <a href="https://calendly.com/valkyrie_no_jutsu" target="_blank" rel="noopener" class="card-btn">Select</a>
+        </div>
+
+        <!-- Soul Path Astro Reading -->
+        <div class="card">
+          <h3>Soul Path Astro Reading</h3>
+          <p class="price">$222 <span>/ 90 mins</span></p>
+          <div class="card-scroll-body">
+            <p>Your Soul Path Natal Chart Reading is offered by using the Tropical Placidus system with a karmic evolutionary lens.</p>
+            <p style="margin-top:0.7rem;">I tap in to thread together astrological insight, exploring your soul's purpose, past-life themes, and recurring lessons. Whether you are navigating a dark night of the soul or simply expanding your self-awareness, I will always bring it back to what your soul came here to do. I look forward to supporting your journey with clarity, compassion, and a deeper connection to your authentic path.</p>
+            <p style="margin-top:0.7rem;">In-depth 1 on 1 video call exploring your Natal Chart Reading blended with Human Design, a collaborative conversation highlighting all the major lessons, patterns, and themes. Receive a private video recording as a keepsake for future reflection.</p>
+          </div>
+          <a href="https://buy.stripe.com/9B63codbng8Fgfr88K3Je01" target="_blank" rel="noopener" class="card-btn">Select</a>
+        </div>
+
+        <!-- Cosmic Guidance Reading -->
+        <div class="card card-returning">
+          <h3>Cosmic Guidance Reading</h3>
+          <p class="price">$111 <span>/ 60 mins</span></p>
+          <div class="card-scroll-body">
+            <p>Welcome back, beautiful soul. As you continue evolving, your astrological map shifts to reflect your current chapter. Whether you are navigating a new endeavor, looking to understand a relationship, or seeking clarity in your life, I am honored to continue holding space for your soul's evolution.</p>
+            <p style="margin-top:0.7rem;">When the planets move, they trigger specific areas and lessons within your natal chart. This session explores the current astrological weather, highlighting the exact lessons, karmic contracts, and/or opportunities the universe is presenting to you right now.</p>
+            <p style="margin-top:0.7rem;">In-depth 1 on 1 video call continuing your soul's journey, capturing the "right now" energy of you. Receive a private video recording as a keepsake for future reflection.</p>
+            <p style="margin-top:0.7rem;">During the session we can flip through various applicable charts including but not limited to the following: Transits (past, current, and/or future), secondary progressions, annual profection year, sidereal chart, draconic chart, synastry reading (need the person's birth day, time, location), and human design.</p>
+            <p class="card-note">Note: Exclusively for returning clients. Please do not book this service if we haven't done your Natal Chart Reading together.</p>
+          </div>
+          <a href="https://buy.stripe.com/4gMdR27R3f4B0gtex83Je02" target="_blank" rel="noopener" class="card-btn">Select</a>
+        </div>
+
+        <!-- Astro Alignment Check -->
+        <div class="card card-returning">
+          <h3>Astro Alignment Check</h3>
+          <p class="price">$88 <span>/ 30 mins</span></p>
+          <div class="card-scroll-body">
+            <p>For returning clients who need a quick energetic check-in, a seasonal alignment tune-up, or cosmic clarity on an immediate decision.</p>
+            <p style="margin-top:0.7rem;">This session skips the broad chart breakdown to focus entirely on your immediate needs. We dive straight into the specific energetic signatures, current transits, or minor progressions impacting your situation right now — whether you're facing a crossroads, an energetic funk, or need quick confirmation on a decision.</p>
+            <p style="margin-top:0.7rem;">A focused 1-on-1 video call dedicated to fast, actionable answers to your most urgent question. Receive a private video recording as a keepsake for future reflection.</p>
+            <p style="margin-top:0.7rem;">During the session we can flip through various applicable charts including but not limited to the following: Transits (past, current, and/or future), secondary progressions, annual profection year, sidereal chart, draconic chart, synastry reading (need the person's birth day, time, location), and human design.</p>
+            <p class="card-note">Note: Exclusively for returning clients. Please do not book this service if we haven't done your Natal Chart Reading together.</p>
+          </div>
+          <a href="https://buy.stripe.com/aFa9AMgnz9Kh4wJex83Je03" target="_blank" rel="noopener" class="card-btn">Select</a>
+        </div>
+
+      </div>
+
+      <!-- Shared Booking Agreements -->
+      <details class="agreements-block reveal">
+        <summary>Agreements · Please Read Before Booking</summary>
+        <div class="agreements-content">
+          <p>To honor our sacred exchange, I maintain very firm boundaries that protect both our time and energy.</p>
+          <h4>Late Changes (&lt;48 Hours)</h4>
+          <p>Chart preparation is already underway, making all session fees non-refundable. If you have an unexpected life event, you are permitted one late reschedule within this window. Subsequent changes forfeit the fee and require a new booking.</p>
+          <h4>No-Shows</h4>
+          <p>A 10-minute grace period is provided at the start of the call. Missing this window counts as a missed appointment and forfeits the fee. True emergencies are exempted, but otherwise you must rebook.</p>
+          <h4>Scope of Practice</h4>
+          <p>My work empowers your inner knowing rather than dictating your path. I offer spiritual insight instead of predictions. You retain full responsibility for your choices and your free will.</p>
+          <h4>Right to Refuse Service</h4>
+          <p>To maintain a mutually respectful environment, I reserve the right to refuse service or decline future bookings at my sole discretion at any time.</p>
+          <p class="ack">By proceeding with your booking and payment, you automatically acknowledge and agree to all terms outlined above.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="wrap">
+      <div class="center reveal" style="margin-bottom:3rem;">
+        <h2 class="section-title">What clients say</h2>
+      </div>
+      <div class="testi-carousel reveal">
+        <div class="testi-track">
+          <div class="testi-slide card">
+            <div class="stars-row">✦ ✦ ✦ ✦ ✦</div>
+            <blockquote>"Valkyrie's reading felt like she was reading my soul, not just my chart. I cried, in the best way."</blockquote>
+          </div>
+          <div class="testi-slide card">
+            <div class="stars-row">✦ ✦ ✦ ✦ ✦</div>
+            <blockquote>"The most accurate and compassionate reading I've ever had. I finally understand my moon sign."</blockquote>
+          </div>
+          <div class="testi-slide card">
+            <div class="stars-row">✦ ✦ ✦ ✦ ✦</div>
+            <blockquote>"She gave me language for things I'd felt my whole life. Truly a bridge between worlds."</blockquote>
+          </div>
+        </div>
+        <div class="testi-nav">
+          <button class="testi-btn testi-prev" aria-label="Previous">‹</button>
+          <div class="testi-dots">
+            <button class="testi-dot active" aria-label="Slide 1"></button>
+            <button class="testi-dot" aria-label="Slide 2"></button>
+            <button class="testi-dot" aria-label="Slide 3"></button>
+          </div>
+          <button class="testi-btn testi-next" aria-label="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect -->
+    <section id="connect" class="wrap">
+      <div class="center reveal" style="margin-bottom:3rem;">
+        <p class="eyebrow">Stay Connected</p>
+        <h2 class="section-title">Find me in the stars</h2>
+        <p class="lead">Book, follow, and support.</p>
+      </div>
+      <!-- Planetary System -->
+      <div class="solar-system reveal" id="solar-system" aria-label="Connect with Valkyrie No Jutsu">
+
+        <!-- SVG orbit rings -->
+        <svg class="ss-rings" viewBox="0 0 700 300" preserveAspectRatio="none" aria-hidden="true">
+          <ellipse cx="350" cy="150" rx="72"  ry="26"  fill="none" stroke="rgba(200,200,240,0.22)" stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="160" ry="57"  fill="none" stroke="rgba(79,140,255,0.28)"  stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="250" ry="89"  fill="none" stroke="rgba(242,95,208,0.24)"  stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="338" ry="120" fill="none" stroke="rgba(0,210,200,0.2)"    stroke-width="1"/>
+        </svg>
+        <!-- Front half of innermost orbit, layered above sun -->
+        <svg class="ss-ring-inner-front" viewBox="0 0 700 300" preserveAspectRatio="none" aria-hidden="true">
+          <ellipse cx="350" cy="150" rx="72" ry="26"/>
+        </svg>
+
+        <!-- Saturn ring back (behind sun) -->
+        <div class="ss-sun-ring-back" aria-hidden="true"></div>
+        <!-- Sun (click to scroll to top) -->
+        <button class="ss-sun" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" title="Back to top" style="cursor:pointer;background:radial-gradient(circle at 38% 38%, #ffe8f8, var(--pink) 55%, var(--purple));border:none;"></button>
+        <!-- Saturn ring front (in front of sun) -->
+        <div class="ss-sun-ring-front" aria-hidden="true"></div>
+
+        <!-- Moon — clickable innermost orb -->
+        <div id="pl-moon" class="ss-planet ss-planet-moon" role="button" tabindex="0" aria-label="Click to see current moon phase"></div>
+
+        <!-- Moon info popup -->
+        <div class="moon-popup" id="moon-popup" role="dialog" aria-label="Moon phase info">
+          <button class="moon-popup-close" id="moon-popup-close" aria-label="Close">✕</button>
+          <div class="moon-popup-phase" id="moon-phase-emoji"></div>
+          <div class="moon-popup-name"  id="moon-phase-name"></div>
+          <div class="moon-popup-sign"  id="moon-sign"></div>
+          <div class="moon-popup-illu"  id="moon-illu"></div>
+        </div>
+
+        <!-- Planets (positioned by JS) -->
+        <a id="pl-email"   href="mailto:vlee13@gmail.com" class="ss-planet ss-planet-email" aria-label="Email">
+          <span class="ss-planet-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(180,210,255,0.95);transform:rotate(-45deg)"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </span>
+        </a>
+        <a id="pl-ig"      href="https://instagram.com/valkyrie_no_jutsu" target="_blank" rel="noopener" class="ss-planet ss-planet-ig" aria-label="Instagram">
+          <span class="ss-planet-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(242,95,208,0.9)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </span>
+        </a>
+        <a id="pl-tiktok"  href="https://tiktok.com/@valkyrienojutsu" target="_blank" rel="noopener" class="ss-planet ss-planet-tiktok" aria-label="TikTok">
+          <span class="ss-planet-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:rgba(0,210,200,0.9)"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#connect">Connect</a>
+      <a href="privacy/">Privacy</a>
+      <a href="terms/">Terms</a>
+    </nav>
+    <p class="copy">© <span id="year"></span> Valkyrie No Jutsu</p>
+  </footer>
+
+  <script>
+    // ---------- Animated starfield ----------
+    (function () {
+      var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var canvas = document.getElementById("starfield");
+      var ctx = canvas.getContext("2d");
+      var stars = [], shooting = null, w, h, dpr;
+
+      function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = canvas.width = window.innerWidth * dpr;
+        h = canvas.height = window.innerHeight * dpr;
+        canvas.style.width = window.innerWidth + "px";
+        canvas.style.height = window.innerHeight + "px";
+        var count = Math.min(260, Math.floor((window.innerWidth * window.innerHeight) / 6000));
+        stars = [];
+        for (var i = 0; i < count; i++) {
+          var light = document.documentElement.getAttribute('data-theme') === 'light';
+          stars.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: (Math.random() * 1.3 + 0.3) * dpr,
+            base: Math.random() * 0.6 + 0.3,
+            tw: Math.random() * 0.02 + 0.004,
+            phase: Math.random() * Math.PI * 2,
+            hue: light
+              ? (Math.random() < 0.5 ? "100,50,180" : (Math.random() < 0.5 ? "194,0,126" : "26,95,212"))
+              : (Math.random() < 0.5 ? "247,243,255" : (Math.random() < 0.5 ? "242,95,208" : "79,140,255"))
+          });
+        }
+      }
+
+      function maybeShoot() {
+        if (shooting || Math.random() > 0.004) return;
+        shooting = {
+          x: Math.random() * w * 0.6,
+          y: Math.random() * h * 0.4,
+          len: (Math.random() * 120 + 80) * dpr,
+          vx: (Math.random() * 4 + 6) * dpr,
+          vy: (Math.random() * 2 + 2) * dpr,
+          life: 1
+        };
+      }
+
+      function frame() {
+        ctx.clearRect(0, 0, w, h);
+        for (var i = 0; i < stars.length; i++) {
+          var s = stars[i];
+          s.phase += s.tw;
+          var a = s.base + Math.sin(s.phase) * 0.3;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(" + s.hue + "," + Math.max(0, a) + ")";
+          ctx.shadowBlur = 6 * dpr;
+          ctx.shadowColor = "rgba(" + s.hue + ",0.8)";
+          ctx.fill();
+        }
+        ctx.shadowBlur = 0;
+
+        maybeShoot();
+        if (shooting) {
+          var sh = shooting;
+          var grad = ctx.createLinearGradient(sh.x, sh.y, sh.x - sh.len, sh.y - sh.len * 0.4);
+          var shotRgb = document.documentElement.getAttribute('data-theme') === 'light' ? "100,50,180" : "247,243,255";
+          grad.addColorStop(0, "rgba(" + shotRgb + "," + sh.life + ")");
+          grad.addColorStop(1, "rgba(" + shotRgb + ",0)");
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = 2 * dpr;
+          ctx.beginPath();
+          ctx.moveTo(sh.x, sh.y);
+          ctx.lineTo(sh.x - sh.len, sh.y - sh.len * 0.4);
+          ctx.stroke();
+          sh.x += sh.vx; sh.y += sh.vy; sh.life -= 0.012;
+          if (sh.life <= 0 || sh.x > w + sh.len) shooting = null;
+        }
+        requestAnimationFrame(frame);
+      }
+
+      function drawStatic() {
+        ctx.clearRect(0, 0, w, h);
+        for (var i = 0; i < stars.length; i++) {
+          var s = stars[i];
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(" + s.hue + "," + s.base + ")";
+          ctx.fill();
+        }
+      }
+
+      window.addEventListener("resize", function () {
+        resize(); if (prefersReduced) drawStatic();
+      });
+      resize();
+      if (prefersReduced) { drawStatic(); } else { frame(); }
+    })();
+
+    // ---------- Mobile nav toggle ----------
+    (function () {
+      var btn = document.querySelector(".nav-toggle");
+      var links = document.querySelector("nav.links");
+      btn.addEventListener("click", function () {
+        var open = links.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open);
+      });
+      links.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () { links.classList.remove("open"); });
+      });
+    })();
+
+    // ---------- Reveal on scroll ----------
+    (function () {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: 0.15 });
+      document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+    })();
+
+    // ---------- Planetary orbits ----------
+    (function () {
+      var ss = document.getElementById('solar-system');
+      if (!ss) return;
+      // rx_f / ry_f = fraction of half container width/height (matching SVG viewBox 520×240)
+      var orbits = [
+        { id: 'pl-moon',   rx_f:  72/350, ry_f:  26/150, period: 6000,  phase: 0.0 },
+        { id: 'pl-email',  rx_f: 160/350, ry_f:  57/150, period: 11000, phase: 2.1 },
+        { id: 'pl-ig',     rx_f: 250/350, ry_f:  89/150, period: 19000, phase: 4.0 },
+        { id: 'pl-tiktok', rx_f: 338/350, ry_f: 120/150, period: 28000, phase: 5.8 }
+      ];
+      function tick() {
+        var w  = ss.offsetWidth;
+        var h  = ss.offsetHeight;
+        var cx = w / 2;
+        var cy = h / 2;
+        var now = Date.now();
+        orbits.forEach(function (o) {
+          var el = document.getElementById(o.id);
+          if (!el) return;
+          var angle = (now / o.period) * Math.PI * 2 + o.phase;
+          el.style.left = (cx + cx * o.rx_f * Math.cos(angle)) + 'px';
+          el.style.top  = (cy + cy * o.ry_f * Math.sin(angle)) + 'px';
+          // Tuck behind sun on the far side (sin < 0 = top of ellipse = behind in perspective)
+          el.style.zIndex = Math.sin(angle) < 0 ? '2' : '5';
+        });
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    // ---------- Moon phase popup ----------
+    (function () {
+      function julianDate(d) { return d / 86400000 + 2440587.5; }
+
+      function getMoonInfo() {
+        var now = new Date();
+        var JD  = julianDate(now);
+        var T   = (JD - 2451545.0) / 36525;
+
+        // Moon mean longitude & synodic age
+        var synodicMonth = 29.530588853;
+        var knownNM = julianDate(new Date('2000-01-06T18:14:00Z'));
+        var age = ((JD - knownNM) % synodicMonth + synodicMonth) % synodicMonth;
+        var illum = Math.round((1 - Math.cos(2 * Math.PI * age / synodicMonth)) / 2 * 100);
+
+        var phases = [
+          { max: 1.85,  name: 'New Moon',        emoji: '🌑' },
+          { max: 7.38,  name: 'Waxing Crescent', emoji: '🌒' },
+          { max: 9.22,  name: 'First Quarter',   emoji: '🌓' },
+          { max: 14.77, name: 'Waxing Gibbous',  emoji: '🌔' },
+          { max: 16.61, name: 'Full Moon',        emoji: '🌕' },
+          { max: 22.15, name: 'Waning Gibbous',  emoji: '🌖' },
+          { max: 23.99, name: 'Last Quarter',     emoji: '🌗' },
+          { max: 29.53, name: 'Waning Crescent', emoji: '🌘' }
+        ];
+        var phase = phases[phases.length - 1];
+        for (var i = 0; i < phases.length; i++) { if (age < phases[i].max) { phase = phases[i]; break; } }
+
+        // Moon mean longitude → zodiac sign
+        var L = ((218.3164477 + 481267.88123421 * T) % 360 + 360) % 360;
+        var signs = [
+          'Aries ♈','Taurus ♉','Gemini ♊','Cancer ♋','Leo ♌','Virgo ♍',
+          'Libra ♎','Scorpio ♏','Sagittarius ♐','Capricorn ♑','Aquarius ♒','Pisces ♓'
+        ];
+        var sign = signs[Math.floor(L / 30)];
+
+        return { phase: phase.name, emoji: phase.emoji, sign: sign, illum: illum };
+      }
+
+      var moonEl  = document.getElementById('pl-moon');
+      var popup   = document.getElementById('moon-popup');
+      var closeBtn= document.getElementById('moon-popup-close');
+      if (!moonEl || !popup) return;
+
+      function openPopup() {
+        var info = getMoonInfo();
+        document.getElementById('moon-phase-emoji').textContent = info.emoji;
+        document.getElementById('moon-phase-name').textContent  = info.phase;
+        document.getElementById('moon-sign').textContent        = 'Moon in ' + info.sign;
+        document.getElementById('moon-illu').textContent        = info.illum + '% illuminated';
+
+        popup.style.opacity = '1';
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+        popup.style.pointerEvents = 'all';
+      }
+
+      function closePopup() {
+        popup.style.opacity = '0';
+        popup.style.transform = 'translate(-50%, -50%) scale(0.92)';
+        popup.style.pointerEvents = 'none';
+      }
+
+      moonEl.addEventListener('click', function (e) { e.stopPropagation(); openPopup(); });
+      moonEl.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') openPopup(); });
+      closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closePopup(); });
+      document.addEventListener('click', function () { closePopup(); });
+    })();
+
+    // ---------- Theme toggle ----------
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('vnj-theme', theme);
+      var btnDark = document.getElementById('btn-dark');
+      var btnLight = document.getElementById('btn-light');
+      if (btnDark)  btnDark.classList.toggle('active', theme === 'dark');
+      if (btnLight) btnLight.classList.toggle('active', theme === 'light');
+
+      // Swap banner image
+      var bannerImg = document.querySelector('.about-banner img');
+      if (theme === 'light') {
+        if (bannerImg) bannerImg.src = 'assets/Gemini_Generated_Image_v8wmkqv8wmkqv8wm.png';
+      } else {
+        if (bannerImg) bannerImg.src = 'assets/Gemini_Generated_Image_su2qdmsu2qdmsu2q.png';
+      }
+
+      // Re-seed stars with theme-correct colours
+      window.dispatchEvent(new Event('resize'));
+    }
+    // Restore saved preference
+    (function () {
+      var saved = localStorage.getItem('vnj-theme') || 'dark';
+      setTheme(saved);
+    })();
+
+    // ---------- Testimonial carousel ----------
+    (function () {
+      var track = document.querySelector('.testi-track');
+      var slides = document.querySelectorAll('.testi-slide');
+      var dots   = document.querySelectorAll('.testi-dot');
+      if (!track || !slides.length) return;
+      var current = 0;
+
+      function goTo(n) {
+        current = (n + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+      }
+
+      document.querySelector('.testi-prev').addEventListener('click', function () { goTo(current - 1); });
+      document.querySelector('.testi-next').addEventListener('click', function () { goTo(current + 1); });
+      dots.forEach(function (d, i) { d.addEventListener('click', function () { goTo(i); }); });
+
+      // Auto-advance every 6 seconds
+      var timer = setInterval(function () { goTo(current + 1); }, 6000);
+      track.parentElement.addEventListener('mouseenter', function () { clearInterval(timer); });
+      track.parentElement.addEventListener('mouseleave', function () {
+        timer = setInterval(function () { goTo(current + 1); }, 6000);
+      });
+    })();
+
+    // ---------- Year ----------
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
