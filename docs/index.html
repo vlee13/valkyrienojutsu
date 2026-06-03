@@ -426,11 +426,13 @@
     .about-bio { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; position: relative; }
     .about-bio-divider { width: 1px; background: linear-gradient(to bottom, transparent, var(--glass-border), transparent); align-self: stretch; }
     @media (max-width: 760px) {
+      .hero { min-height: auto; padding: 7rem 0 1.5rem; }
       .about-bio { grid-template-columns: 1fr; }
       .about-bio-divider { display: none; }
       .about-bio::after { display: none; }
       .about-left-panel::before { display: none; }
       .about-left-panel { padding: 0; }
+      .cosmic-photo { opacity: 1 !important; }
     }
     .about-left-panel { position: relative; padding: 0 1.5rem 0 0; }
     .about-left-panel::before {
