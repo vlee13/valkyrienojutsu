@@ -231,6 +231,7 @@
       mix-blend-mode: screen;
       -webkit-mask-image: linear-gradient(to bottom, black 0%, black 25%, rgba(0,0,0,0.6) 55%, transparent 75%);
       mask-image: linear-gradient(to bottom, black 0%, black 25%, rgba(0,0,0,0.6) 55%, transparent 75%);
+      transition: opacity 0.5s ease;
     }
     .cosmic-photo::after {
       content: ""; position: absolute; inset: 0;
@@ -1157,23 +1158,31 @@
 
     // ---------- Theme toggle ----------
     function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('vnj-theme', theme);
-      var btnDark = document.getElementById('btn-dark');
-      var btnLight = document.getElementById('btn-light');
-      if (btnDark)  btnDark.classList.toggle('active', theme === 'dark');
-      if (btnLight) btnLight.classList.toggle('active', theme === 'light');
+      var cp = document.querySelector('.cosmic-photo');
+      // Fade out cosmic background, swap theme, fade back in
+      if (cp) cp.style.opacity = '0';
+      setTimeout(function () {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('vnj-theme', theme);
+        var btnDark = document.getElementById('btn-dark');
+        var btnLight = document.getElementById('btn-light');
+        if (btnDark)  btnDark.classList.toggle('active', theme === 'dark');
+        if (btnLight) btnLight.classList.toggle('active', theme === 'light');
 
-      // Swap banner image
-      var bannerImg = document.querySelector('.about-banner img');
-      if (theme === 'light') {
-        if (bannerImg) bannerImg.src = 'assets/Gemini_Generated_Image_v8wmkqv8wmkqv8wm.png';
-      } else {
-        if (bannerImg) bannerImg.src = 'assets/Gemini_Generated_Image_su2qdmsu2qdmsu2q.png';
-      }
+        // Swap banner image
+        var bannerImg = document.querySelector('.about-banner img');
+        if (theme === 'light') {
+          if (bannerImg) bannerImg.src = 'assets/Gemini_Generated_Image_v8wmkqv8wmkqv8wm.png';
+        } else {
+          if (bannerImg) bannerImg.src = 'assets/Gemini_Generated_Image_su2qdmsu2qdmsu2q.png';
+        }
 
-      // Re-seed stars with theme-correct colours
-      window.dispatchEvent(new Event('resize'));
+        // Re-seed stars with theme-correct colours
+        window.dispatchEvent(new Event('resize'));
+
+        // Fade back in
+        if (cp) cp.style.opacity = '';
+      }, 250);
     }
     // Restore saved preference
     (function () {
