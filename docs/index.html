@@ -471,9 +471,9 @@
       mix-blend-mode: screen; transform: scale(1.15); }
 
     /* ---------- Services ---------- */
-    .service-cards { display: grid; grid-template-columns: repeat(4, 1fr);
+    .service-cards { display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem; margin-bottom: 3rem; align-items: stretch; }
-    @media (max-width: 1100px) { .service-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 1000px) { .service-cards { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .service-cards { grid-template-columns: 1fr; } }
     .service-cards h3 { font-size: 1.25rem; color: var(--star); margin-bottom: 0.5rem; }
     .service-cards .price { color: var(--pink); font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.7rem; }
@@ -500,6 +500,21 @@
       margin-bottom: 0.5rem; }
     .client-badge.new { color: var(--purple); }
     .client-badge.returning { color: var(--pink); }
+    .client-badge.live { color: #00c8a0; }
+    .pay-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1rem; }
+    .pay-pill {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.28rem 0.7rem; border-radius: 999px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+      text-decoration: none; cursor: pointer; border: none; font-family: var(--sans);
+      transition: opacity 0.18s, transform 0.15s; color: #fff;
+    }
+    .pay-pill:hover { opacity: 0.82; transform: translateY(-1px); }
+    .pay-pill-venmo  { background: #008CFF; }
+    .pay-pill-paypal { background: #003087; }
+    .pay-pill-zelle  { background: #6D1ED4; }
+    .pay-pill-stripe { background: #635BFF; }
+    .pay-pill-copied { background: #00b37d !important; }
     .agreements-block { margin-top: 3rem; scroll-margin-top: 6rem; width: 100%; }
     .agreements-block summary { cursor: pointer; list-style: none; display: flex;
       align-items: center; justify-content: center; gap: 0.7rem;
@@ -864,6 +879,38 @@
             <p class="card-note">Note: Exclusively for returning clients - Please do not book this service if we haven't done your Soul Path Astro Reading together.</p>
           </div>
           <a href="https://buy.stripe.com/aFa9AMgnz9Kh4wJex83Je03" target="_blank" rel="noopener" class="card-btn">Select</a>
+        </div>
+
+        <!-- Yearly Astrology Mentorship -->
+        <div class="card card-returning">
+          <span class="client-badge returning">Returning Clients</span>
+          <h3>Yearly Astrology Mentorship</h3>
+          <p class="price">$660 <span>/ 12 sessions · 1 hr each</span></p>
+          <div class="card-scroll-body">
+            <p>For the soul ready to do the deeper work. This bundle grants you 12 private 1-on-1 sessions to use across the year — one per month or spaced however your journey calls for it.</p>
+            <p style="margin-top:0.7rem;">Every session is rooted in astrology: your transits, progressions, and the cosmic weather shaping your current chapter. While no subject is off the table, every conversation is anchored in your chart and the stars guiding you forward. This is for clients committed to working toward a specific goal with consistent, intentional support.</p>
+            <p style="margin-top:0.7rem;">Sessions act as a credit — non-refundable, non-transferable, and do not roll over. Unused sessions expire 12 months from purchase date.</p>
+            <p class="card-note">Note: Exclusively for returning clients with a completed Soul Path Astro Reading. All sessions must be strictly astrology-based.</p>
+          </div>
+          <a href="#" class="card-btn">Select</a>
+        </div>
+
+        <!-- TikTok Live Mini Reading -->
+        <div class="card">
+          <span class="client-badge live">✦ Live Event</span>
+          <h3>TikTok Live Mini Reading</h3>
+          <p class="price">$33 <span>/ 15 mins</span></p>
+          <div class="card-scroll-body">
+            <p>Catch me live on TikTok for a quick 15-minute birth chart reading. Jump into the chat to sign up when I go live — schedule TBD, follow along so you never miss a session.</p>
+            <p style="margin-top:0.7rem;">Send payment directly before your reading begins using any of the methods below. Friends &amp; Family only for PayPal — no fees, no fuss.</p>
+            <div class="pay-pills">
+              <a href="https://venmo.com/u/valkyrie_no_jutsu" target="_blank" rel="noopener" class="pay-pill pay-pill-venmo">Venmo</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vlee13%40gmail.com&amount=33&currency_code=USD&item_name=TikTok+Live+Mini+Reading" target="_blank" rel="noopener" class="pay-pill pay-pill-paypal">PayPal</a>
+              <button class="pay-pill pay-pill-zelle" data-copy="vlee13@gmail.com" data-label="Zelle">Zelle</button>
+              <a href="#" class="pay-pill pay-pill-stripe">Stripe</a>
+            </div>
+          </div>
+          <a href="https://www.tiktok.com/@valkyrienojutsu" target="_blank" rel="noopener" class="card-btn">Follow on TikTok →</a>
         </div>
 
       </div>
@@ -1343,6 +1390,30 @@
         resumeAuto();
       }, { passive: true });
     })();
+
+    // ---------- Pay pill copy (Zelle) ----------
+    document.querySelectorAll('.pay-pill[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var label = btn.getAttribute('data-label') || 'Copied';
+        var orig = btn.textContent;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          try { document.execCommand('copy'); } catch(e) {}
+          document.body.removeChild(ta);
+        }
+        btn.textContent = '✓ ' + text;
+        btn.classList.add('pay-pill-copied');
+        setTimeout(function () {
+          btn.textContent = orig;
+          btn.classList.remove('pay-pill-copied');
+        }, 2200);
+      });
+    });
 
     // ---------- Year ----------
     document.getElementById("year").textContent = new Date().getFullYear();
