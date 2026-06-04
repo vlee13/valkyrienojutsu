@@ -82,7 +82,7 @@
       display: block;
       background: url('assets/Gemini_Generated_Image_wjzmt0wjzmt0wjzm.png') center 30% / cover no-repeat;
       mix-blend-mode: multiply;
-      opacity: 0.26;
+      opacity: 0.52;
       filter: hue-rotate(-8deg) saturate(0.78) brightness(1.45) contrast(1.15);
       -webkit-mask-image:
         radial-gradient(ellipse 55% 75% at 50% 42%, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.65) 35%, black 58%, rgba(0,0,0,0.75) 78%, transparent 100%),
@@ -133,8 +133,8 @@
     [data-theme="light"] .valkyrie-frame img { mix-blend-mode: multiply; transform: none; filter: none; }
     [data-theme="light"] .about-banner img { mix-blend-mode: multiply; transform: scale(1.15); }
     [data-theme="light"] .ss-sun {
-      background: radial-gradient(circle at 38% 38%, #fff0fa, #f0a8d8 50%, #c878c0);
-      box-shadow: 0 0 18px rgba(194,0,126,0.35), 0 0 45px rgba(194,0,126,0.15);
+      background: radial-gradient(circle at 38% 38%, #ffe0ff, #c040e0 45%, #7b2fbe);
+      box-shadow: 0 0 18px rgba(180,50,220,0.5), 0 0 45px rgba(150,40,200,0.2);
     }
     [data-theme="light"] .ss-planet-moon {
       background: radial-gradient(circle at 32% 28%, #f4f0ff, #c8c0e8 45%, #9888c8 75%, #7060a8);
@@ -442,7 +442,7 @@
       .about-left-panel::before { width: 70%; top: -5%; left: -2%; }
       .about-left-panel { padding: 0; }
       [data-theme="dark"] .cosmic-photo { opacity: 1 !important; }
-      [data-theme="light"] .cosmic-photo { filter: hue-rotate(-8deg) saturate(0.78) brightness(1.45) contrast(1.15); opacity: 0.10; }
+      [data-theme="light"] .cosmic-photo { filter: hue-rotate(-8deg) saturate(0.78) brightness(1.45) contrast(1.15); opacity: 0.52; }
     }
     .about-left-panel { position: relative; padding: 0 1.5rem 0 0; }
     .about-left-panel::before {
@@ -566,7 +566,7 @@
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       width: 66px; height: 66px; border-radius: 50%;
-      background: radial-gradient(circle at 38% 38%, #ffe8f8, var(--pink) 55%, var(--purple));
+      background: radial-gradient(circle at 38% 38%, #ffe0ff, #c040e0 45%, var(--purple));
       box-shadow: 0 0 22px rgba(242,95,208,0.9), 0 0 55px rgba(242,95,208,0.45), 0 0 100px rgba(123,63,242,0.3);
       z-index: 3; animation: sun-pulse 3s ease-in-out infinite;
     }
@@ -581,7 +581,7 @@
       width: 136px; height: 22px; border-radius: 50%;
       border: 2px solid rgba(242,95,208,0.72);
       transform: translate(-50%, -50%) rotate(60deg);
-      box-shadow: 0 0 14px rgba(242,95,208,0.55), 0 0 32px rgba(180,100,255,0.22);
+      filter: drop-shadow(0 0 6px rgba(242,95,208,0.55)) drop-shadow(0 0 14px rgba(180,100,255,0.22));
       pointer-events: none;
     }
     .ss-sun-ring-back  { z-index: 2; clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%); }
@@ -642,8 +642,9 @@
     .ss-planet-ig:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 28px rgba(242,95,208,0.7); filter: brightness(1.15); }
     /* TikTok — teal orb */
     .ss-planet-tiktok {
+      width: 38px; height: 38px;
       background: radial-gradient(circle at 33% 28%, #b2fff8, #00d2c8 44%, #006060 80%, #001f1f);
-      box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 18px rgba(0,210,200,0.4);
+      box-shadow: inset -5px -5px 10px rgba(0,0,0,0.45), 0 0 18px rgba(0,210,200,0.4);
     }
     .ss-planet-tiktok:hover { box-shadow: inset -6px -6px 12px rgba(0,0,0,0.45), 0 0 28px rgba(0,210,200,0.7); filter: brightness(1.15); }
 
@@ -847,6 +848,8 @@
         <summary>Agreements · Please Read Before Booking</summary>
         <div class="agreements-content">
           <p>To honor our sacred exchange, I maintain very firm boundaries that protect both our time and energy.</p>
+          <h4>Privacy</h4>
+          <p>Your privacy is respected. Booking info is collected via Calendly and payments are processed securely by Stripe — we never see your card details. Your information is never sold and is used only to deliver your reading. Session recordings are kept strictly private and will never be shared without the explicit consent of both parties.</p>
           <h4>Late Changes (&lt;48 Hours)</h4>
           <p>Chart preparation is already underway, making all session fees non-refundable. If you have an unexpected life event, you are permitted one late reschedule within this window. Subsequent changes forfeit the fee and require a new booking.</p>
           <h4>No-Shows</h4>
@@ -921,14 +924,14 @@
 
         <!-- SVG orbit rings -->
         <svg class="ss-rings" viewBox="0 0 700 300" preserveAspectRatio="none" aria-hidden="true">
-          <ellipse cx="350" cy="150" rx="72"  ry="26"  fill="none" stroke="rgba(200,200,240,0.22)" stroke-width="1"/>
-          <ellipse cx="350" cy="150" rx="148" ry="53"  fill="none" stroke="rgba(79,140,255,0.28)"  stroke-width="1"/>
-          <ellipse cx="350" cy="150" rx="224" ry="80"  fill="none" stroke="rgba(242,95,208,0.24)"  stroke-width="1"/>
-          <ellipse cx="350" cy="150" rx="300" ry="107" fill="none" stroke="rgba(0,210,200,0.2)"    stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="95"  ry="34"  fill="none" stroke="rgba(200,200,240,0.22)" stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="165" ry="59"  fill="none" stroke="rgba(79,140,255,0.28)"  stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="235" ry="84"  fill="none" stroke="rgba(242,95,208,0.24)"  stroke-width="1"/>
+          <ellipse cx="350" cy="150" rx="305" ry="109" fill="none" stroke="rgba(0,210,200,0.2)"    stroke-width="1"/>
         </svg>
         <!-- Front half of innermost orbit, layered above sun -->
         <svg class="ss-ring-inner-front" viewBox="0 0 700 300" preserveAspectRatio="none" aria-hidden="true">
-          <ellipse cx="350" cy="150" rx="72" ry="26"/>
+          <ellipse cx="350" cy="150" rx="95" ry="34"/>
         </svg>
 
         <!-- Saturn ring back (behind sun) -->
@@ -977,8 +980,7 @@
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#connect">Connect</a>
-      <a href="privacy/">Privacy</a>
-      <a href="terms/">Agreements</a>
+      <a href="#agreements">Agreements</a>
     </nav>
     <p class="copy">© <span id="year"></span> Valkyrie No Jutsu</p>
   </footer>
@@ -1106,10 +1108,10 @@
       if (!ss) return;
       // rx_f / ry_f = fraction of half container width/height (matching SVG viewBox 520×240)
       var orbits = [
-        { id: 'pl-moon',   rx_f:  72/350, ry_f:  26/150, period: 6000,  phase: 0.0 },
-        { id: 'pl-email',  rx_f: 148/350, ry_f:  53/150, period: 11000, phase: 2.1 },
-        { id: 'pl-ig',     rx_f: 224/350, ry_f:  80/150, period: 19000, phase: 4.0 },
-        { id: 'pl-tiktok', rx_f: 300/350, ry_f: 107/150, period: 28000, phase: 5.8 }
+        { id: 'pl-moon',   rx_f:  95/350, ry_f:  34/150, period: 6000,  phase: 0.0 },
+        { id: 'pl-email',  rx_f: 165/350, ry_f:  59/150, period: 11000, phase: 2.1 },
+        { id: 'pl-ig',     rx_f: 235/350, ry_f:  84/150, period: 19000, phase: 4.0 },
+        { id: 'pl-tiktok', rx_f: 305/350, ry_f: 109/150, period: 28000, phase: 5.8 }
       ];
       function tick() {
         var w  = ss.offsetWidth;
@@ -1123,8 +1125,9 @@
           var angle = (now / o.period) * Math.PI * 2 + o.phase;
           el.style.left = (cx + cx * o.rx_f * Math.cos(angle)) + 'px';
           el.style.top  = (cy + cy * o.ry_f * Math.sin(angle)) + 'px';
-          // Tuck behind sun on the far side (sin < 0 = top of ellipse = behind in perspective)
-          el.style.zIndex = Math.sin(angle) < 0 ? '2' : '5';
+          // Tuck behind ring on the far side (sin < 0 = top of ellipse = behind in perspective)
+          // ring-back=2, sun=3, ring-front=4 — far side must be below all of these
+          el.style.zIndex = Math.sin(angle) < 0 ? '1' : '6';
         });
         requestAnimationFrame(tick);
       }
@@ -1220,12 +1223,12 @@
       window.dispatchEvent(new Event('resize'));
 
       // Force iOS Safari to recomposite position:fixed background layers.
-      // These layers are composited separately and only repaint on a real scroll
-      // event. We trigger a hairline opacity change on each fixed layer (invisible
-      // to the eye) which forces iOS to mark them dirty and flush the compositor.
+      // Nudge translateZ so iOS marks the compositor layers dirty without
+      // touching opacity (which would override theme-specific CSS opacity).
       var iosRepaintEls = document.querySelectorAll('#starfield, .cosmic-photo, .nebula, .vignette');
       iosRepaintEls.forEach(function (el) {
-        el.style.opacity = el.style.opacity === '0.9999' ? '1' : '0.9999';
+        el.style.transform = 'translateZ(0.001px)';
+        setTimeout(function () { el.style.transform = ''; }, 100);
       });
       // Belt-and-suspenders: also nudge scroll so iOS recomposites the full scene.
       // Use setTimeout so the first scrollTo paints before we scroll back.
