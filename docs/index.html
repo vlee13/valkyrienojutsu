@@ -1308,18 +1308,19 @@
       track.parentElement.addEventListener('mouseleave', resumeAuto);
 
       // Touch / swipe support
+      var carousel = document.querySelector('.testi-carousel');
       var touchStartX = null;
       var touchStartY = null;
       var dragging = false;
 
-      track.addEventListener('touchstart', function (e) {
+      carousel.addEventListener('touchstart', function (e) {
         touchStartX = e.touches[0].clientX;
         touchStartY = e.touches[0].clientY;
         dragging = false;
         pauseAuto();
       }, { passive: true });
 
-      track.addEventListener('touchmove', function (e) {
+      carousel.addEventListener('touchmove', function (e) {
         if (touchStartX === null) return;
         var dx = e.touches[0].clientX - touchStartX;
         var dy = e.touches[0].clientY - touchStartY;
@@ -1330,7 +1331,7 @@
         }
       }, { passive: false });
 
-      track.addEventListener('touchend', function (e) {
+      carousel.addEventListener('touchend', function (e) {
         if (touchStartX === null) return;
         var dx = e.changedTouches[0].clientX - touchStartX;
         if (dragging && Math.abs(dx) > 40) {
