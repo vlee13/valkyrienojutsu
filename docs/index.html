@@ -1266,10 +1266,45 @@
 
       // Auto-advance every 6 seconds
       var timer = setInterval(function () { goTo(current + 1); }, 6000);
-      track.parentElement.addEventListener('mouseenter', function () { clearInterval(timer); });
-      track.parentElement.addEventListener('mouseleave', function () {
-        timer = setInterval(function () { goTo(current + 1); }, 6000);
-      });
+      function pauseAuto() { clearInterval(timer); }
+      function resumeAuto() { timer = setInterval(function () { goTo(current + 1); }, 6000); }
+      track.parentElement.addEventListener('mouseenter', pauseAuto);
+      track.parentElement.addEventListener('mouseleave', resumeAuto);
+
+      // Touch / swipe support
+      var touchStartX = null;
+      var touchStartY = null;
+      var dragging = false;
+
+      track.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        dragging = false;
+        pauseAuto();
+      }, { passive: true });
+
+      track.addEventListener('touchmove', function (e) {
+        if (touchStartX === null) return;
+        var dx = e.touches[0].clientX - touchStartX;
+        var dy = e.touches[0].clientY - touchStartY;
+        // If moving more horizontally than vertically, treat as a carousel drag
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
+          dragging = true;
+          e.preventDefault(); // prevent page scroll while swiping carousel
+        }
+      }, { passive: false });
+
+      track.addEventListener('touchend', function (e) {
+        if (touchStartX === null) return;
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        if (dragging && Math.abs(dx) > 40) {
+          goTo(dx < 0 ? current + 1 : current - 1);
+        }
+        touchStartX = null;
+        touchStartY = null;
+        dragging = false;
+        resumeAuto();
+      }, { passive: true });
     })();
 
     // ---------- Year ----------
