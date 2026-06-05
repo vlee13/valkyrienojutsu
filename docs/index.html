@@ -473,15 +473,20 @@
     /* ---------- Services ---------- */
     .service-cards { display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem; margin-bottom: 3rem; align-items: stretch; }
-    @media (max-width: 1000px) { .service-cards { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .service-cards { grid-template-columns: 1fr; } .card-scroll-body { flex: none; max-height: 280px; overflow-y: auto; } }
-    @media (min-width: 601px) { .card-scroll-body { flex: 1; max-height: none; } .card-btn { margin-top: auto; } }
     .service-cards h3 { font-size: 1.25rem; color: var(--star); margin-bottom: 0.5rem; }
     .service-cards .price { color: var(--pink); font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.7rem; }
     .service-cards .price span { font-size: 0.95rem; color: var(--muted); }
     .service-cards p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; }
-    .card-scroll-body { flex: 1; max-height: 280px; overflow-y: auto; padding-right: 0.4rem; margin-bottom: 1.6rem; scrollbar-width: thin;
+    /* Base (desktop / multi-col): scroll body grows to fill card so button anchors to bottom */
+    .card-scroll-body { flex: 1 1 auto; max-height: none; overflow-y: auto; padding-right: 0.4rem; margin-bottom: 1.6rem; scrollbar-width: thin;
       scrollbar-color: rgba(242,95,208,0.3) transparent; }
+    .card-btn { margin-top: auto; }
+    /* Responsive grid + mobile scroll cap (declared after base so it wins) */
+    @media (max-width: 1000px) { .service-cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) {
+      .service-cards { grid-template-columns: 1fr; }
+      .card-scroll-body { flex: 0 1 auto; max-height: 280px; }
+    }
     .card-scroll-body::-webkit-scrollbar { width: 4px; }
     .card-scroll-body::-webkit-scrollbar-thumb { background: rgba(242,95,208,0.3); border-radius: 4px; }
     .service-tag { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -705,7 +710,7 @@
       box-shadow: 0 0 14px rgba(242,95,208,0.3); }
 
     .card-btn {
-      display: block; margin-top: 0; padding: 0.65rem 1.2rem; text-align: center; border-radius: 999px; text-decoration: none;
+      display: block; padding: 0.65rem 1.2rem; text-align: center; border-radius: 999px; text-decoration: none;
       font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.08em;
       color: #fff; border: 1px solid rgba(242,95,208,0.45);
       background: rgba(242,95,208,0.08);
