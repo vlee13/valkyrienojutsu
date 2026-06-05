@@ -24,24 +24,36 @@
   }
   .canvas {
     position: relative; width: 1200px; height: 630px;
+    /* Galaxy palette emulating the old preview: indigo base, purple +
+       magenta glows, a blue pool toward the bottom. Keeps the bottom edge
+       in the indigo-purple range that yields a pretty iMessage caption. */
     background:
-      radial-gradient(ellipse 80% 90% at 50% 40%, #160b38 0%, var(--void-2) 45%, var(--void) 100%);
+      radial-gradient(ellipse 52% 50% at 85% 88%, rgba(224,76,168,0.52) 0%, transparent 60%),
+      radial-gradient(ellipse 52% 52% at 15% 88%, rgba(120,58,222,0.50) 0%, transparent 62%),
+      radial-gradient(ellipse 70% 42% at 50% 112%, rgba(56,68,150,0.45) 0%, transparent 60%),
+      linear-gradient(165deg, #1b1238 0%, #150e2c 55%, #181138 100%);
     display: grid; place-items: center; overflow: hidden;
+  }
+  /* Starfield */
+  .stars { position: absolute; inset: 0; z-index: 1; }
+  .stars i {
+    position: absolute; border-radius: 50%; background: #fff;
+    box-shadow: 0 0 3px rgba(255,255,255,0.6);
   }
   /* Wings backdrop — same asset as the site's dark hero */
   .wings {
-    position: absolute; inset: 0;
+    position: absolute; inset: 0; z-index: 1;
     background: url('assets/Gemini_Generated_Image_n4ukl5n4ukl5n4uk.png') center 46% / 112% no-repeat;
     mix-blend-mode: screen;
-    filter: brightness(1.12) saturate(1.45) contrast(1.1);
-    opacity: 0.95;
+    filter: brightness(1.05) saturate(1.4) contrast(1.05);
+    opacity: 0.92;
   }
-  /* Soft darkening so text stays legible over the wings */
+  /* Soft, purple-toned darkening so the title stays legible — kept off the
+     bottom edge so the caption-sampled color stays indigo, not black. */
   .scrim {
-    position: absolute; inset: 0;
+    position: absolute; inset: 0; z-index: 1;
     background:
-      radial-gradient(ellipse 60% 55% at 50% 42%, rgba(5,3,15,0.55) 0%, rgba(5,3,15,0.15) 45%, transparent 70%),
-      linear-gradient(to bottom, rgba(5,3,15,0.35) 0%, transparent 30%, transparent 70%, rgba(5,3,15,0.55) 100%);
+      radial-gradient(ellipse 58% 50% at 50% 42%, rgba(22,12,48,0.45) 0%, rgba(22,12,48,0.12) 50%, transparent 72%);
   }
   .inner {
     position: relative; z-index: 2; text-align: center;
@@ -74,6 +86,7 @@
 </head>
 <body>
   <div class="canvas">
+    <div class="stars" id="stars"></div>
     <div class="wings"></div>
     <div class="scrim"></div>
     <div class="inner">
@@ -82,5 +95,23 @@
       <p class="tagline">Your cosmic guide between worlds.</p>
     </div>
   </div>
+  <script>
+    // Deterministic starfield (seeded) so re-renders are identical.
+    (function () {
+      var seed = 7;
+      function rnd() { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
+      var host = document.getElementById('stars');
+      var html = '';
+      for (var i = 0; i < 140; i++) {
+        var x = rnd() * 100, y = rnd() * 100;
+        var s = 0.6 + rnd() * 1.8;            // size 0.6–2.4px
+        var o = 0.25 + rnd() * 0.65;          // opacity
+        html += '<i style="left:' + x.toFixed(2) + '%;top:' + y.toFixed(2) +
+                '%;width:' + s.toFixed(2) + 'px;height:' + s.toFixed(2) +
+                'px;opacity:' + o.toFixed(2) + '"></i>';
+      }
+      host.innerHTML = html;
+    })();
+  </script>
 </body>
 </html>
