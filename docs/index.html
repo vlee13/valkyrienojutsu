@@ -509,20 +509,6 @@
     .client-badge.live { color: #89CFF0; }
     .card-btn-live { background: rgba(137,207,240,0.15) !important; border-color: rgba(137,207,240,0.55) !important; color: rgba(137,207,240,0.95) !important; }
     [data-theme="light"] .card-btn-live { color: #000 !important; background: rgba(137,207,240,0.35) !important; border-color: rgba(137,207,240,0.7) !important; }
-    .pay-pills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.45rem; margin-top: 1rem; }
-    .pay-pill {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      padding: 0.28rem 0.7rem; border-radius: 999px;
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
-      text-decoration: none; cursor: pointer; border: none; font-family: var(--sans);
-      transition: opacity 0.18s, transform 0.15s; color: #fff;
-    }
-    .pay-pill:hover { opacity: 0.82; transform: translateY(-1px); }
-    .pay-pill-venmo  { background: #008CFF; }
-    .pay-pill-paypal { background: #003087; }
-    .pay-pill-zelle  { background: #6D1ED4; }
-    .pay-pill-stripe { background: #635BFF; }
-    .pay-pill-copied { background: #00b37d !important; }
     .agreements-block { margin-top: 3rem; scroll-margin-top: 6rem; width: 100%; }
     .agreements-block summary { cursor: pointer; list-style: none; display: flex;
       align-items: center; justify-content: center; gap: 0.7rem;
@@ -866,18 +852,11 @@
           <p class="price">$33 <span>/ 15 mins</span></p>
           <div class="card-scroll-body">
             <p>Join me live on TikTok for a quick 15-minute birth chart reading or reserve your spot in advance below! Walk-ins are always welcome in the chat too. Please note your birth chart will be shared on screen and the reading is interactive and you will answer questions live in the chat. If you prefer a private, 1-on-1 experience, please choose one of my other offerings.</p>
-            <p style="margin-top:0.7rem;"><strong style="color:var(--star);">Pre-book:</strong> Send your birth details ahead of time and secure your slot. I'll have your chart ready before we go live.</p>
+            <p style="margin-top:0.7rem;"><strong style="color:var(--star);">Pre-book:</strong> Reserve your spot below, send payment, and you'll be routed to pick your time. I'll have your chart ready before we go live.</p>
             <p style="margin-top:0.7rem;"><strong style="color:var(--star);">Walk-in:</strong> Catch me live and jump into the chat to sign up on the spot. Schedule TBD, follow along so you never miss one.</p>
-            <p style="margin-top:0.7rem;">Send payment before your reading using any method below. Friends &amp; Family only for PayPal.</p>
-            <div class="pay-pills">
-              <a href="https://venmo.com/u/valkyrie_no_jutsu" target="_blank" rel="noopener" class="pay-pill pay-pill-venmo">Venmo</a>
-              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vlee13%40gmail.com&amount=33&currency_code=USD&item_name=TikTok+Live+Mini+Reading" target="_blank" rel="noopener" class="pay-pill pay-pill-paypal">PayPal</a>
-              <button class="pay-pill pay-pill-zelle" data-copy="vlee13@gmail.com" data-label="Zelle">Zelle</button>
-              <a href="https://buy.stripe.com/eVq6oA3ANe0x8MZ2Oq3Je04" target="_blank" rel="noopener" class="pay-pill pay-pill-stripe">Stripe</a>
-            </div>
           </div>
           <div style="display:flex;flex-direction:column;gap:0.55rem;margin-top:auto;">
-            <a href="https://calendly.com/valkyrie_no_jutsu/tiktok-live-pre-book" target="_blank" rel="noopener" class="card-btn" style="margin-top:0;">Pre-book a Spot →</a>
+            <a href="https://buy.stripe.com/eVq6oA3ANe0x8MZ2Oq3Je04" target="_blank" rel="noopener" class="card-btn" style="margin-top:0;">Pre-book a Spot →</a>
             <a href="https://www.tiktok.com/@valkyrienojutsu" target="_blank" rel="noopener" class="card-btn card-btn-live" style="margin-top:0;">Catch me on Live!</a>
           </div>
         </div>
@@ -1403,30 +1382,6 @@
         resumeAuto();
       }, { passive: true });
     })();
-
-    // ---------- Pay pill copy (Zelle) ----------
-    document.querySelectorAll('.pay-pill[data-copy]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var text = btn.getAttribute('data-copy');
-        var label = btn.getAttribute('data-label') || 'Copied';
-        var orig = btn.textContent;
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(text);
-        } else {
-          var ta = document.createElement('textarea');
-          ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
-          document.body.appendChild(ta); ta.focus(); ta.select();
-          try { document.execCommand('copy'); } catch(e) {}
-          document.body.removeChild(ta);
-        }
-        btn.textContent = '✓ ' + text;
-        btn.classList.add('pay-pill-copied');
-        setTimeout(function () {
-          btn.textContent = orig;
-          btn.classList.remove('pay-pill-copied');
-        }, 2200);
-      });
-    });
 
     // ---------- Year ----------
     document.getElementById("year").textContent = new Date().getFullYear();
