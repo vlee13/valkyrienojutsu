@@ -328,6 +328,11 @@
     .lead { font-family: var(--serif); font-size: 1.3rem; color: var(--muted); max-width: 60ch; }
     /* Bio section — all text cursive/italic for cohesion */
     .about-bio .lead { font-style: italic; }
+    /* On phones, break the translation line right before the quote */
+    @media (max-width: 600px) {
+      .vnj-translate .vnj-a, .vnj-translate .vnj-b { display: block; }
+      .vnj-translate .vnj-b { white-space: nowrap; }
+    }
 
     /* ---------- Nav ---------- */
     header.nav {
@@ -814,8 +819,8 @@
           <div class="about-bio">
             <!-- Panel 1: Valkyrie blurb -->
             <div class="about-left-panel">
-              <p class="lead" style="color:var(--pink); margin-bottom:0.3rem;">
-                <em>Valkyrie No Jutsu</em> | translates to <em>"The Art of the Valkyries"</em>
+              <p class="lead vnj-translate" style="color:var(--pink); margin-bottom:0.3rem;">
+                <span class="vnj-a"><em>Valkyrie No Jutsu</em> | translates to</span> <span class="vnj-b"><em>"The Art of the Valkyries"</em></span>
               </p>
               <p class="lead">
                 In mythology, Valkyries were divine emissaries, winged guardians who moved freely between the world of the living and the realm beyond. They did not judge; they <em>witnessed</em>. They held the sacred space between worlds with grace, strength, and unwavering clarity, guiding souls along their passage.
