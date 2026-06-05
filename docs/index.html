@@ -443,6 +443,14 @@
       .about-left-panel { padding: 0; }
       [data-theme="dark"] .cosmic-photo { opacity: 1 !important; }
       [data-theme="light"] .cosmic-photo { filter: hue-rotate(-8deg) saturate(0.78) brightness(1.45) contrast(1.15); opacity: 0.52; }
+      [data-theme="light"] .about-bio {
+        background: rgba(255,255,255,0.44);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        border-radius: 18px;
+        padding: 1.35rem 1.2rem;
+        box-shadow: 0 4px 55px rgba(180,100,220,0.38);
+      }
     }
     .about-left-panel { position: relative; padding: 0 1.5rem 0 0; }
     .about-left-panel::before {
