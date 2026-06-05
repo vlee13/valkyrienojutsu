@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1200, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>OG preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Outfit:wght@200;300;400;500;600;700&family=IM+Fell+English+SC&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  :root {
+    --void: #05030f;
+    --void-2: #0b0820;
+    --purple: #7b3ff2;
+    --pink: #f25fd0;
+    --blue: #4f8cff;
+    --star: #f7f3ff;
+    --muted: #b3a9d9;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Outfit", system-ui, sans-serif;
+  }
+  .canvas {
+    position: relative; width: 1200px; height: 630px;
+    background:
+      radial-gradient(ellipse 80% 90% at 50% 40%, #160b38 0%, var(--void-2) 45%, var(--void) 100%);
+    display: grid; place-items: center; overflow: hidden;
+  }
+  /* Wings backdrop — same asset as the site's dark hero */
+  .wings {
+    position: absolute; inset: 0;
+    background: url('assets/Gemini_Generated_Image_n4ukl5n4ukl5n4uk.png') center 46% / 112% no-repeat;
+    mix-blend-mode: screen;
+    filter: brightness(1.12) saturate(1.45) contrast(1.1);
+    opacity: 0.95;
+  }
+  /* Soft darkening so text stays legible over the wings */
+  .scrim {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 42%, rgba(5,3,15,0.55) 0%, rgba(5,3,15,0.15) 45%, transparent 70%),
+      linear-gradient(to bottom, rgba(5,3,15,0.35) 0%, transparent 30%, transparent 70%, rgba(5,3,15,0.55) 100%);
+  }
+  .inner {
+    position: relative; z-index: 2; text-align: center;
+    display: grid; justify-items: center; gap: 22px;
+    padding: 0 80px; transform: translateY(-6px);
+  }
+  .eyebrow {
+    font-family: var(--sans); font-size: 24px; letter-spacing: 0.42em;
+    text-transform: uppercase; color: var(--pink); font-weight: 400;
+    text-shadow: 0 0 18px rgba(242,95,208,0.45);
+  }
+  h1 {
+    font-family: "IM Fell English SC", Georgia, serif;
+    font-weight: 400; font-style: italic; font-size: 116px;
+    letter-spacing: 0.06em; line-height: 1.08;
+    background: linear-gradient(120deg, var(--star), var(--pink) 50%, var(--blue));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 0 34px rgba(242,95,208,0.45))
+            drop-shadow(0 0 70px rgba(180,130,255,0.25));
+  }
+  .tagline {
+    font-family: var(--serif); font-style: italic; font-size: 40px;
+    color: var(--muted); letter-spacing: 0.01em;
+    text-shadow: 0 2px 20px rgba(5,3,15,0.8);
+  }
+  /* corner star accents */
+  .star-accent { position: absolute; z-index: 2; color: var(--pink); opacity: 0.7;
+    font-family: var(--serif); }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="wings"></div>
+    <div class="scrim"></div>
+    <div class="inner">
+      <p class="eyebrow">Astrology &amp; Soul Guidance</p>
+      <h1>Valkyrie<br>No&nbsp;Jutsu</h1>
+      <p class="tagline">Your cosmic guide between worlds.</p>
+    </div>
+  </div>
+</body>
+</html>
