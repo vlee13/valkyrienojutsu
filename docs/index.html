@@ -541,6 +541,14 @@
       box-shadow: 0 0 24px rgba(242,95,208,0.35);
       transition: transform 0.2s, box-shadow 0.2s, border-radius 0.2s; text-align: center; }
     .agreements-block summary:hover { transform: translateY(-2px); box-shadow: 0 0 36px rgba(242,95,208,0.6); }
+    /* Desktop: leading dot hidden so it reads "Agreements · Please Read Before Booking" */
+    .agreements-block summary .agr-dot-pre { display: none; }
+    @media (max-width: 600px) {
+      /* Stack as two clean lines: "· Agreements ·" / "Please Read Before Booking" */
+      .agreements-block summary { flex-direction: column; gap: 0.2rem; padding: 0.85rem 1.6rem; }
+      .agreements-block summary .agr-dot-pre { display: inline; }
+      .agreements-block summary .agr-sub { white-space: nowrap; }
+    }
     .agreements-block[open] summary { border-radius: 999px 999px 0 0; box-shadow: none; transform: none; }
     .agreements-content { border: 1px solid rgba(242,95,208,0.3); border-top: none;
       border-radius: 0 0 2rem 2rem; padding: 1.4rem 1.6rem;
@@ -936,11 +944,11 @@
 
       <!-- Shared Booking Agreements -->
       <details id="agreements" class="agreements-block reveal">
-        <summary>Agreements · Please Read Before Booking</summary>
+        <summary><span class="agr-title"><span class="agr-dot-pre" aria-hidden="true">·</span> Agreements <span class="agr-dot-post" aria-hidden="true">·</span></span><span class="agr-sub">Please Read Before Booking</span></summary>
         <div class="agreements-content">
           <p>To honor our sacred exchange, I maintain very firm boundaries that protect both our time and energy.</p>
           <h4>Privacy</h4>
-          <p>Your privacy is respected. Booking info is collected via Cal.com and payments are processed securely by Stripe — we never see your card details. Your information is never sold and is used only to deliver your reading. Session recordings are kept strictly private and will never be shared without the explicit consent of both parties.</p>
+          <p>Your privacy is respected. Booking info is collected via Cal.com and payments are processed securely by Stripe. We never see your card details. Your information is never sold and is used only to deliver your reading. Session recordings are kept strictly private and will never be shared without the explicit consent of both parties.</p>
           <h4>Late Changes (&lt;48 Hours)</h4>
           <p>Chart preparation is already underway, making all session fees non-refundable. If you have an unexpected life event, you are permitted one late reschedule within this window. Subsequent changes forfeit the fee and require a new booking.</p>
           <h4>No-Shows</h4>
