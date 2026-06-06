@@ -1359,10 +1359,9 @@
       window.scrollTo(0, s + 1);
       setTimeout(function () { window.scrollTo(0, s); }, 50);
     }
-    // Restore saved preference
+    // Always open in dark mode (the toggle still works during the session)
     (function () {
-      var saved = localStorage.getItem('vnj-theme') || 'dark';
-      setTheme(saved);
+      setTheme('dark');
     })();
 
     // ---------- Testimonial carousel ----------
