@@ -314,6 +314,7 @@
 
     /* ---------- Layout ---------- */
     .wrap { width: min(1100px, 90vw); margin: 0 auto; }
+    [data-theme="dark"] #services .lead, [data-theme="dark"] #testimonials .lead { text-shadow: 0 2px 16px rgba(5,3,15,0.8); }
     section { padding: 7rem 0; position: relative; }
 
     h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: 0.04em; line-height: 1.2; }
@@ -453,6 +454,14 @@
     .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
     .about-bio { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; position: relative; }
     .about-bio-divider { width: 1px; background: linear-gradient(to bottom, transparent, var(--glass-border), transparent); align-self: stretch; }
+    [data-theme="light"] .about-bio {
+      background: rgba(252,232,245,0.26);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      border-radius: 18px;
+      padding: 1.75rem 2rem;
+      box-shadow: 0 4px 40px rgba(214,110,196,0.16);
+    }
     @media (max-width: 760px) {
       .hero { min-height: auto; padding: 7rem 0 1.5rem; }
       .about-bio { grid-template-columns: 1fr; }
@@ -463,12 +472,12 @@
       [data-theme="dark"] .cosmic-photo { opacity: 1 !important; }
       [data-theme="light"] .cosmic-photo { filter: hue-rotate(-8deg) saturate(0.78) brightness(1.45) contrast(1.15); opacity: 0.52; }
       [data-theme="light"] .about-bio {
-        background: rgba(255,255,255,0.44);
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
+        background: rgba(252,232,245,0.26);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
         border-radius: 18px;
         padding: 1.35rem 1.2rem;
-        box-shadow: 0 4px 55px rgba(180,100,220,0.38);
+        box-shadow: 0 4px 40px rgba(214,110,196,0.16);
       }
     }
     .about-left-panel { position: relative; padding: 0 1.5rem 0 0; }
@@ -869,7 +878,7 @@
       <div class="center reveal" style="margin-bottom:3rem;">
         <p class="eyebrow">Offerings</p>
         <h2 class="section-title">Readings &amp; Services</h2>
-        <p class="lead" style="max-width:none;font-size:clamp(0.95rem,4vw,1.3rem);line-height:1.7;text-shadow:0 2px 16px rgba(5,3,15,0.8);"><span style="display:block;white-space:nowrap;">Choose your reading below and book instantly.</span><span style="display:block;white-space:nowrap;">Payment is handled securely at checkout.</span></p>
+        <p class="lead" style="max-width:none;font-size:clamp(0.95rem,4vw,1.3rem);line-height:1.7;"><span style="display:block;white-space:nowrap;">Choose your reading below and book instantly.</span><span style="display:block;white-space:nowrap;">Payment is handled securely at checkout.</span></p>
       </div>
 
       <div class="service-cards reveal">
@@ -969,7 +978,7 @@
       <div class="center reveal" style="margin-bottom:3rem;">
         <p class="eyebrow">Testimonials</p>
         <h2 class="section-title">What clients say</h2>
-        <p class="lead" style="text-shadow:0 2px 16px rgba(5,3,15,0.8);">Voices from the journey.</p>
+        <p class="lead">Voices from the journey.</p>
       </div>
       <div class="testi-carousel reveal">
         <div class="testi-window">
